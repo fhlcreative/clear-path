@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clear-Path AI Consulting — Brand Guide</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      color: #1C2B3A;
+      background: #F7F9FB;
+      line-height: 1.6;
+      padding: 3rem 1.5rem 6rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ---- Header ---- */
+    .brand-header {
+      text-align: center;
+      margin-bottom: 4rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #E2E8F0;
+    }
+    .brand-header img { max-width: 280px; margin: 0 auto 1.5rem; }
+    .brand-header h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 2.25rem;
+      color: #1B2E4F;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    .brand-header p { color: #64748B; margin-top: 0.5rem; font-size: 1.1rem; }
+
+    /* ---- Section ---- */
+    section { margin-bottom: 4rem; }
+    section > h2 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.5rem;
+      color: #1B2E4F;
+      margin-bottom: 0.25rem;
+      font-weight: 600;
+    }
+    section > .section-desc {
+      color: #64748B;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ---- Color Palette ---- */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.25rem;
+    }
+    .color-card {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #E2E8F0;
+      background: #fff;
+    }
+    .color-swatch {
+      height: 100px;
+      display: flex;
+      align-items: flex-end;
+      padding: 0.75rem;
+    }
+    .color-swatch span {
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-family: 'Outfit', sans-serif;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.85);
+      color: #1B2E4F;
+    }
+    .color-info {
+      padding: 0.75rem;
+    }
+    .color-info strong {
+      display: block;
+      font-size: 0.95rem;
+      color: #1B2E4F;
+    }
+    .color-info code {
+      font-size: 0.85rem;
+      color: #64748B;
+      background: #F1F5F9;
+      padding: 0.1rem 0.35rem;
+      border-radius: 3px;
+    }
+    .color-info .color-usage {
+      font-size: 0.82rem;
+      color: #94A3B8;
+      margin-top: 0.25rem;
+    }
+
+    /* ---- Typography ---- */
+    .type-specimen {
+      background: #fff;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 1.25rem;
+    }
+    .type-specimen__label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #3795B7;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    .type-specimen__sample {
+      margin-bottom: 0.5rem;
+    }
+    .type-specimen__meta {
+      font-size: 0.82rem;
+      color: #64748B;
+    }
+    .type-specimen__meta code {
+      background: #F1F5F9;
+      padding: 0.1rem 0.35rem;
+      border-radius: 3px;
+    }
+
+    .type-scale {
+      display: grid;
+      gap: 1rem;
+      background: #fff;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-top: 1.5rem;
+    }
+    .type-scale-row {
+      display: flex;
+      align-items: baseline;
+      gap: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid #F1F5F9;
+    }
+    .type-scale-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .type-scale-row .ts-label {
+      font-size: 0.8rem;
+      color: #64748B;
+      min-width: 80px;
+      flex-shrink: 0;
+      font-family: monospace;
+    }
+    .type-scale-row .ts-sample {
+      font-family: 'Outfit', sans-serif;
+      color: #1B2E4F;
+    }
+
+    /* ---- Buttons ---- */
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .btn-demo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 2rem;
+      border-radius: 8px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: default;
+      border: 2px solid transparent;
+    }
+    .btn-demo--primary {
+      background: #F59E0B;
+      color: #1B2E4F;
+    }
+    .btn-demo--teal {
+      background: #3795B7;
+      color: #fff;
+    }
+    .btn-demo--outline {
+      background: transparent;
+      border-color: #1B2E4F;
+      color: #1B2E4F;
+    }
+    .btn-demo--outline-light {
+      background: transparent;
+      border-color: rgba(255,255,255,0.4);
+      color: #fff;
+    }
+    .btn-label {
+      font-size: 0.82rem;
+      color: #64748B;
+    }
+    .dark-demo {
+      background: #0F1D35;
+      border-radius: 8px;
+      padding: 1.5rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
+
+    /* ---- Logos ---- */
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .logo-card {
+      border-radius: 12px;
+      border: 1px solid #E2E8F0;
+      padding: 2.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo-card img { max-width: 240px; max-height: 80px; }
+    .logo-card--dark { background: #0F1D35; border-color: #0F1D35; }
+    .logo-card--light { background: #fff; }
+    .logo-card--teal { background: #3795B7; border-color: #3795B7; }
+
+    /* ---- Spacing ---- */
+    .spacing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+    .spacing-item {
+      background: #fff;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 1rem;
+    }
+    .spacing-bar {
+      height: 12px;
+      background: #3795B7;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+    }
+    .spacing-item code {
+      font-size: 0.82rem;
+      color: #1B2E4F;
+      display: block;
+    }
+    .spacing-item .spacing-val {
+      font-size: 0.78rem;
+      color: #64748B;
+    }
+
+    /* ---- Overline ---- */
+    .overline-demo {
+      text-transform: uppercase;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: #3795B7;
+    }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 600px) {
+      .color-grid { grid-template-columns: repeat(2, 1fr); }
+      .type-scale-row { flex-direction: column; gap: 0.25rem; }
+      .type-scale-row .ts-label { min-width: unset; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="brand-header">
+    <img src="logo.svg" alt="Clear-Path AI Consulting logo">
+    <h1>Brand Guide</h1>
+    <p>Colors, typography, and design tokens for Clear-Path AI Consulting</p>
+  </div>
+
+  <!-- ===== LOGOS ===== -->
+  <section>
+    <h2>Logo</h2>
+    <p class="section-desc">Primary logo on light, dark, and brand backgrounds.</p>
+    <div class="logo-grid">
+      <div class="logo-card logo-card--light">
+        <img src="logo.svg" alt="Logo on light background">
+      </div>
+      <div class="logo-card logo-card--dark">
+        <img src="logo-dark.svg" alt="Logo on dark background">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COLOR PALETTE ===== -->
+  <section>
+    <h2>Color Palette</h2>
+    <p class="section-desc">Primary brand colors and their usage.</p>
+    <div class="color-grid">
+
+      <div class="color-card">
+        <div class="color-swatch" style="background:#1B2E4F;">
+          <span style="color:#fff; background:rgba(0,0,0,0.3);">#1B2E4F</span>
+        </div>
+        <div class="color-info">
+          <strong>Navy</strong>
+          <code>brand-navy</code>
+          <div class="color-usage">Headings, primary dark backgrounds, nav</div>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-swatch" style="background:#0F1D35;">
+          <span style="color:#fff; background:rgba(0,0,0,0.3);">#0F1D35</span>
+        </div>
+        <div class="color-info">
+          <strong>Navy Deep</strong>
+          <code>--navy-deep</code>
+          <div class="color-usage">Footer, dark sections, CTA backgrounds</div>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-swatch" style="background:#3795B7;">
+          <span style="color:#fff; background:rgba(0,0,0,0.2);">#3795B7</span>
+        </div>
+        <div class="color-info">
+          <strong>Teal</strong>
+          <code>brand-teal</code>
+          <div class="color-usage">Primary accent, links, icons, overlines</div>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-swatch" style="background:#2D7A99;">
+          <span style="color:#fff; background:rgba(0,0,0,0.2);">#2D7A99</span>
+        </div>
+        <div class="color-info">
+          <strong>Teal Hover</strong>
+          <code>brand-teal-hover</code>
+          <div class="color-usage">Hover state for teal elements</div>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-swatch" style="background:#EBF5F9;">
+          <span>#EBF5F9</span>
+        </div>
+        <div class="color-info">
+          <strong>Teal Light</strong>
+          <code>brand-teal-light</code>
+          <div class="color-usage">Light teal backgrounds, badges</div>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-swatch" style="background:#F59E0B;">
+          <span>#F59E0B</span>
+        </div>
+        <div class="color-info">
+          <strong>Amber</strong>
+          <code>amber-500</code>
+          <div class="color-usage">CTA buttons, primary actions</div>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-swatch" style="background:#F7F9FB;">
+          <span>#F7F9FB</span>
+        </div>
+        <div class="color-info">
+          <strong>Slate Wash</strong>
+          <code>--bg-body</code>
+          <div class="color-usage">Body background</div>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-swatch" style="background:#ffffff; border-bottom: 1px solid #E2E8F0;">
+          <span>#ffffff</span>
+        </div>
+        <div class="color-info">
+          <strong>White</strong>
+          <code>--surface</code>
+          <div class="color-usage">Cards, content surfaces, nav</div>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-swatch" style="background:#1C2B3A;">
+          <span style="color:#fff; background:rgba(0,0,0,0.3);">#1C2B3A</span>
+        </div>
+        <div class="color-info">
+          <strong>Text</strong>
+          <code>--color-text</code>
+          <div class="color-usage">Body copy, primary text</div>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-swatch" style="background:#64748B;">
+          <span style="color:#fff; background:rgba(0,0,0,0.3);">#64748B</span>
+        </div>
+        <div class="color-info">
+          <strong>Text Muted</strong>
+          <code>slate-500</code>
+          <div class="color-usage">Descriptions, secondary text</div>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-swatch" style="background:#E2E8F0;">
+          <span>#E2E8F0</span>
+        </div>
+        <div class="color-info">
+          <strong>Border</strong>
+          <code>slate-200</code>
+          <div class="color-usage">Dividers, card borders</div>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-swatch" style="background:#F1F5F9;">
+          <span>#F1F5F9</span>
+        </div>
+        <div class="color-info">
+          <strong>Slate Light</strong>
+          <code>slate-100</code>
+          <div class="color-usage">Alternating sections, subtle backgrounds</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== TYPOGRAPHY ===== -->
+  <section>
+    <h2>Typography</h2>
+    <p class="section-desc">Two-font system loaded from Google Fonts.</p>
+
+    <!-- Heading font -->
+    <div class="type-specimen">
+      <div class="type-specimen__label">Heading Font</div>
+      <div class="type-specimen__sample" style="font-family:'Fraunces',Georgia,serif; font-size:2.25rem; color:#1B2E4F; font-weight:600; letter-spacing:-0.02em; line-height:1.15;">
+        Fraunces — The quick brown fox jumps over the lazy dog
+      </div>
+      <div class="type-specimen__sample" style="font-family:'Fraunces',Georgia,serif; font-size:1.5rem; color:#1B2E4F; font-weight:400; font-style:italic; line-height:1.3; margin-top:0.5rem;">
+        Fraunces Italic — The quick brown fox jumps over the lazy dog
+      </div>
+      <div class="type-specimen__meta">
+        <code>font-family: 'Fraunces', Georgia, serif</code> &middot; Optical size: 9-144 &middot; Weights: 400, 500, 600, 700 + Italic
+      </div>
+    </div>
+
+    <!-- Body font -->
+    <div class="type-specimen">
+      <div class="type-specimen__label">Body Font</div>
+      <div class="type-specimen__sample" style="font-family:'Outfit',sans-serif; font-size:1.5rem; color:#1C2B3A; font-weight:400; line-height:1.5;">
+        Outfit — The quick brown fox jumps over the lazy dog
+      </div>
+      <div class="type-specimen__sample" style="font-family:'Outfit',sans-serif; font-size:1.125rem; color:#1C2B3A; font-weight:600; line-height:1.5; margin-top:0.5rem;">
+        Outfit Semibold — The quick brown fox jumps over the lazy dog
+      </div>
+      <div class="type-specimen__meta">
+        <code>font-family: 'Outfit', sans-serif</code> &middot; Weights: 300, 400, 500, 600, 700
+      </div>
+    </div>
+
+    <!-- Overline -->
+    <div class="type-specimen">
+      <div class="type-specimen__label">Overline Style</div>
+      <div class="type-specimen__sample">
+        <span class="overline-demo">Section Label</span>
+      </div>
+      <div class="type-specimen__meta">
+        Uppercase &middot; <code>letter-spacing: 0.1em</code> &middot; <code>font-weight: 600</code> &middot; Teal (<code>#3795B7</code>)
+      </div>
+    </div>
+
+    <!-- Type scale -->
+    <h3 style="font-family:'Fraunces',Georgia,serif; font-size:1.15rem; color:#1B2E4F; margin-top:2rem; margin-bottom:0.5rem; font-weight:600;">Type Scale</h3>
+    <p style="font-size:0.9rem; color:#64748B; margin-bottom:1rem;">Fluid sizes using CSS <code style="background:#F1F5F9; padding:0.1rem 0.35rem; border-radius:3px;">clamp()</code> — scales between mobile and desktop.</p>
+    <div class="type-scale">
+      <div class="type-scale-row">
+        <span class="ts-label">h1</span>
+        <span class="ts-sample" style="font-family:'Fraunces',Georgia,serif; font-size:clamp(2.5rem,5vw + 1rem,4.5rem); font-weight:600; color:#1B2E4F; line-height:1.1; letter-spacing:-0.02em;">Hero Heading</span>
+      </div>
+      <div class="type-scale-row">
+        <span class="ts-label">h2</span>
+        <span class="ts-sample" style="font-family:'Fraunces',Georgia,serif; font-size:clamp(2rem,3.5vw + 0.5rem,3rem); font-weight:600; color:#1B2E4F; line-height:1.15; letter-spacing:-0.015em;">Section Heading</span>
+      </div>
+      <div class="type-scale-row">
+        <span class="ts-label">h3</span>
+        <span class="ts-sample" style="font-family:'Fraunces',Georgia,serif; font-size:clamp(1.25rem,1.5vw + 0.5rem,1.5rem); font-weight:600; color:#1B2E4F; line-height:1.25; letter-spacing:-0.01em;">Sub-Heading</span>
+      </div>
+      <div class="type-scale-row">
+        <span class="ts-label">lead</span>
+        <span class="ts-sample" style="font-size:1.25rem; color:#1C2B3A;">Lead Paragraph Text</span>
+      </div>
+      <div class="type-scale-row">
+        <span class="ts-label">base</span>
+        <span class="ts-sample" style="font-size:1rem; color:#1C2B3A;">Body Text — The quick brown fox jumps over the lazy dog.</span>
+      </div>
+      <div class="type-scale-row">
+        <span class="ts-label">sm</span>
+        <span class="ts-sample" style="font-size:0.875rem; color:#64748B;">Small Text / Captions</span>
+      </div>
+      <div class="type-scale-row">
+        <span class="ts-label">xs</span>
+        <span class="ts-sample" style="font-size:0.75rem; color:#64748B;">Fine Print / Labels</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BUTTONS ===== -->
+  <section>
+    <h2>Buttons</h2>
+    <p class="section-desc">Primary CTA and secondary button styles on light and dark backgrounds.</p>
+
+    <div class="button-row">
+      <span class="btn-demo btn-demo--primary">Book Your Assessment</span>
+      <span class="btn-label">Primary CTA — Amber bg, navy text</span>
+    </div>
+    <div class="button-row">
+      <span class="btn-demo btn-demo--teal">Learn More</span>
+      <span class="btn-label">Secondary — Teal bg, white text</span>
+    </div>
+    <div class="button-row">
+      <span class="btn-demo btn-demo--outline">See How It Works</span>
+      <span class="btn-label">Outline — Navy border on light bg</span>
+    </div>
+    <div class="dark-demo">
+      <span class="btn-demo btn-demo--primary">Book Your Assessment</span>
+      <span class="btn-demo btn-demo--outline-light">Learn More</span>
+      <span class="btn-label" style="color:rgba(255,255,255,0.5);">On dark backgrounds</span>
+    </div>
+  </section>
+
+  <!-- ===== SECTION BACKGROUNDS ===== -->
+  <section>
+    <h2>Section Backgrounds</h2>
+    <p class="section-desc">Background colors used to create visual rhythm between sections.</p>
+    <div style="display:grid; gap:0; border-radius:12px; overflow:hidden; border:1px solid #E2E8F0;">
+      <div style="background:#0F1D35; color:#fff; padding:1.5rem 2rem;">
+        <strong style="color:#3795B7;">Navy Deep</strong> — Hero, dark feature sections, final CTA
+        <div style="font-size:0.85rem; color:rgba(255,255,255,0.5); margin-top:0.25rem;">#0F1D35</div>
+      </div>
+      <div style="background:#1B2E4F; color:#fff; padding:1.5rem 2rem;">
+        <strong style="color:#3795B7;">Navy</strong> — Navigation (scrolled state uses white)
+        <div style="font-size:0.85rem; color:rgba(255,255,255,0.5); margin-top:0.25rem;">#1B2E4F / brand-navy</div>
+      </div>
+      <div style="background:#F7F9FB; padding:1.5rem 2rem;">
+        <strong style="color:#1B2E4F;">Slate Wash</strong> — Default body background
+        <div style="font-size:0.85rem; color:#64748B; margin-top:0.25rem;">#F7F9FB</div>
+      </div>
+      <div style="background:#F1F5F9; padding:1.5rem 2rem;">
+        <strong style="color:#1B2E4F;">Slate Light</strong> — Alternating light sections
+        <div style="font-size:0.85rem; color:#64748B; margin-top:0.25rem;">#F1F5F9 / slate-100</div>
+      </div>
+      <div style="background:#ffffff; padding:1.5rem 2rem;">
+        <strong style="color:#1B2E4F;">White</strong> — Cards, content surfaces
+        <div style="font-size:0.85rem; color:#64748B; margin-top:0.25rem;">#ffffff</div>
+      </div>
+      <div style="background:#EBF5F9; padding:1.5rem 2rem;">
+        <strong style="color:#1B2E4F;">Teal Light</strong> — Badges, teal-tinted backgrounds
+        <div style="font-size:0.85rem; color:#64748B; margin-top:0.25rem;">#EBF5F9 / brand-teal-light</div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
