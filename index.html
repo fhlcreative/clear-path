@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear-Path AI Consulting | Is AI Worth It for Your Business?</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="description" content="Clear-Path AI Consulting helps small business owners determine if AI is worth it — with process mapping, documented SOPs, and honest ROI analysis. Not a sales pitch.">
+    <meta property="og:title" content="Clear-Path AI Consulting | Is AI Worth It for Your Business?">
+    <meta property="og:description" content="We help small business owners answer that question — with a process-first methodology that gives you clarity, not a sales pitch.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="logo.svg">
+    <meta name="twitter:card" content="summary">
+    
+    <!-- Fonts: Fraunces (headings) + Outfit (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#1B2E4F',
+                            teal: '#3795B7',
+                            'teal-light': '#EBF5F9',
+                            'teal-hover': '#2D7A99',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Iconify Solar Linear Icons -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #F7F9FB; /* warm slate with subtle blue tint */
+            color: #1C2B3A; /* navy-tinted dark instead of pure slate */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-kerning: normal;
+        }
+
+        h1, h2, h3, h4, blockquote p {
+            font-family: 'Fraunces', Georgia, serif;
+        }
+
+        /* Fluid heading scale — !important to override Tailwind preflight */
+        h1 { font-size: clamp(2.5rem, 5vw + 1rem, 4.5rem) !important; line-height: 1.1 !important; letter-spacing: -0.02em !important; }
+        h2 { font-size: clamp(2rem, 3.5vw + 0.5rem, 3rem) !important; line-height: 1.15 !important; letter-spacing: -0.015em !important; }
+        h3 { font-size: clamp(1.25rem, 1.5vw + 0.5rem, 1.5rem) !important; line-height: 1.25 !important; letter-spacing: -0.01em !important; }
+
+        /* Increase line-height for light-on-dark body text */
+        [style*="background: #0F1D35"] p,
+        [style*="background: #0F1D35"] li,
+        [style*="background: #0F1D35"] span { line-height: 1.7; }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal.delay-100 { transition-delay: 0.1s; }
+        .reveal.delay-200 { transition-delay: 0.2s; }
+        .reveal.delay-300 { transition-delay: 0.3s; }
+        .reveal.delay-400 { transition-delay: 0.4s; }
+        .reveal.delay-500 { transition-delay: 0.5s; }
+
+        /* Hide scrollbar for cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F7F9FB;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #CBD5E1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94A3B8;
+        }
+
+        .nav-scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .nav-scrolled .nav-link-hero { color: #64748B; }
+        .nav-scrolled .nav-link-hero:hover { color: #0f172a; }
+        .nav-scrolled .nav-logo-white { display: none; }
+        .nav-scrolled .nav-logo-color { display: block; }
+        .nav-scrolled .mobile-menu-btn-icon { color: #475569; }
+
+        iconify-icon {
+            stroke-width: 1.5;
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { transition: opacity 0.3s ease !important; transform: none !important; }
+            .cta-btn { transition: background-color 0.2s ease !important; }
+            .cta-btn:hover { transform: none !important; }
+            .step-circle { transition: none !important; }
+            .hand-circle path { animation: none !important; stroke-dashoffset: 0 !important; }
+        }
+
+        /* Focus indicators */
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid #3795B7;
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
+
+        /* Accordion animations */
+        .faq-item { transition: border-color 0.3s ease; }
+        .faq-item.active { border-color: #3795B7; }
+        .faq-content {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.35s ease;
+        }
+        .faq-item.active .faq-content {
+            grid-template-rows: 1fr;
+        }
+        .faq-content-inner {
+            overflow: hidden;
+        }
+        .faq-icon-plus { transition: transform 0.3s ease, opacity 0.3s ease; }
+        .faq-icon-minus { transition: transform 0.3s ease, opacity 0.3s ease; position: absolute; right: 0; opacity: 0; transform: rotate(-90deg); }
+        .faq-item.active .faq-icon-plus { opacity: 0; transform: rotate(90deg); }
+        .faq-item.active .faq-icon-minus { opacity: 1; transform: rotate(0deg); }
+
+        /* CTA button lift on hover */
+        .cta-btn {
+            transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.2s ease, background-color 0.2s ease;
+        }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(245, 158, 11, 0.3);
+        }
+        .cta-btn:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.2);
+        }
+
+        /* Timeline circle fill animation */
+        .step-circle {
+            transition: background-color 0.5s ease 0.2s, border-color 0.5s ease 0.2s, color 0.5s ease 0.2s;
+        }
+        .reveal.active .step-circle {
+            background-color: #3795B7;
+            border-color: #3795B7;
+            color: white;
+        }
+
+        /* Blockquote border draw-in */
+        blockquote {
+            border-left-color: transparent;
+            transition: border-left-color 0.6s ease 0.3s;
+        }
+        .reveal.active blockquote,
+        blockquote.drawn {
+            border-left-color: #3795B7;
+        }
+
+        /* Nav link underline reveal */
+        .nav-link-hero {
+            position: relative;
+        }
+        .nav-link-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: currentColor;
+            transition: width 0.3s ease;
+        }
+        .nav-link-hero:hover::after {
+            width: 100%;
+        }
+
+        /* Hand-drawn circle animation */
+        .hand-circle svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(100% + 40px);
+            height: calc(100% + 30px);
+        }
+        .hand-circle path {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+        }
+        .hand-circle.drawn path {
+            animation: drawCircle 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+        @keyframes drawCircle {
+            to { stroke-dashoffset: 0; }
+        }
+
+        /* Cursor glow spotlight */
+        .hero-glow {
+            position: absolute;
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(55, 149, 183, 0.12) 0%, transparent 70%);
+            filter: blur(40px);
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.3s ease;
+            opacity: 0;
+            z-index: 1;
+        }
+        .hero-glow.visible { opacity: 1; }
+
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-teal-light selection:text-brand-navy pb-20 md:pb-0">
+
+    <!-- Skip to content -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:bg-white focus:text-slate-900 focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:text-sm focus:font-medium">Skip to main content</a>
+
+    <!-- Top Navigation -->
+    <header>
+    <nav id="main-nav" class="fixed top-0 w-full z-50 transition-all duration-300" aria-label="Main navigation">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                <img src="logo-dark.svg" alt="Clear-Path AI Consulting" class="h-8 md:h-10 w-auto nav-logo-white">
+                <img src="logo.svg" alt="Clear-Path AI Consulting" class="h-8 md:h-10 w-auto nav-logo-color hidden">
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="#the-problem" class="nav-link-hero text-sm font-medium text-white/70 hover:text-white transition-colors">The Problem</a>
+                <a href="#how-it-works" class="nav-link-hero text-sm font-medium text-white/70 hover:text-white transition-colors">How It Works</a>
+                <a href="#what-you-get" class="nav-link-hero text-sm font-medium text-white/70 hover:text-white transition-colors">What You Get</a>
+                <a href="#about" class="nav-link-hero text-sm font-medium text-white/70 hover:text-white transition-colors">About</a>
+            </div>
+
+            <!-- CTA -->
+            <div class="hidden md:flex items-center">
+                <a href="#start-a-conversation" class="inline-flex items-center justify-center h-10 px-6 rounded-full bg-amber-500 hover:bg-amber-600 text-slate-900 font-medium text-sm shadow-sm cta-btn">
+                    Start a Conversation
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="lg:hidden p-2 mobile-menu-btn-icon text-white/80 hover:text-white" aria-label="Toggle menu" aria-expanded="false">
+                <iconify-icon icon="solar:hamburger-menu-linear" class="text-2xl menu-open-icon"></iconify-icon>
+                <iconify-icon icon="solar:close-circle-linear" class="text-2xl menu-close-icon hidden"></iconify-icon>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="lg:hidden overflow-hidden" style="max-height: 0; opacity: 0; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;">
+            <div class="bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-lg">
+                <div class="px-6 py-6 flex flex-col gap-1">
+                    <a href="#the-problem" class="mobile-nav-link text-lg font-medium text-slate-700 hover:text-brand-teal py-3 border-b border-slate-100 transition-colors" style="font-family: 'Fraunces', Georgia, serif;">The Problem</a>
+                    <a href="#how-it-works" class="mobile-nav-link text-lg font-medium text-slate-700 hover:text-brand-teal py-3 border-b border-slate-100 transition-colors" style="font-family: 'Fraunces', Georgia, serif;">How It Works</a>
+                    <a href="#what-you-get" class="mobile-nav-link text-lg font-medium text-slate-700 hover:text-brand-teal py-3 border-b border-slate-100 transition-colors" style="font-family: 'Fraunces', Georgia, serif;">What You Get</a>
+                    <a href="#about" class="mobile-nav-link text-lg font-medium text-slate-700 hover:text-brand-teal py-3 transition-colors" style="font-family: 'Fraunces', Georgia, serif;">About</a>
+                    <a href="#start-a-conversation" class="mobile-nav-link inline-flex items-center justify-center h-12 mt-4 rounded-full bg-amber-500 hover:bg-amber-600 text-slate-900 font-medium text-base cta-btn" style="font-family: 'Outfit', sans-serif;">Start a Conversation</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+    <!-- Fixed Mobile CTA Bottom -->
+    <div class="fixed bottom-0 left-0 right-0 p-4 bg-white/90 backdrop-blur-md border-t border-slate-200 z-50 md:hidden flex justify-center">
+        <a href="#start-a-conversation" class="flex-1 inline-flex items-center justify-center h-12 rounded-full bg-amber-500 hover:bg-amber-600 text-slate-900 font-medium text-base shadow-sm cta-btn">
+            Start a Conversation
+        </a>
+    </div>
+
+    <main id="main-content">
+
+    <!-- Hero Section -->
+    <section class="min-h-[100dvh] flex flex-col relative items-center justify-between overflow-hidden pt-20" style="background: #0F1D35;">
+
+        <!-- Process Map Background Image (parallax on mouse) -->
+        <div id="hero-parallax" class="absolute inset-[-40px] opacity-[0.07] transition-transform duration-300 ease-out" aria-hidden="true">
+            <img src="images/flowchart.webp" alt="" class="w-full h-full object-cover scale-110">
+        </div>
+
+        <!-- Cursor glow -->
+        <div id="hero-glow" class="hero-glow" aria-hidden="true"></div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center my-auto">
+
+            <h1 class="reveal font-medium text-white mb-6">
+                Is AI Worth It for Your Business?
+            </h1>
+
+            <p class="reveal delay-200 text-lg md:text-2xl text-slate-400 max-w-3xl mx-auto mb-6 leading-relaxed">
+                We help small business owners answer that question — with a process-first methodology that gives you clarity, not a sales pitch.
+            </p>
+
+            <p class="reveal delay-300 text-sm font-semibold text-brand-teal uppercase tracking-[0.2em] mb-12" style="font-family: 'Outfit', sans-serif;">
+                Process First. AI Second.
+            </p>
+
+            <div class="reveal delay-500 flex flex-col items-center justify-center gap-4">
+                <a href="#start-a-conversation" class="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-slate-900 font-medium h-14 rounded-full px-8 text-lg shadow-sm cta-btn group">
+                    Start a Conversation
+                    <iconify-icon icon="solar:arrow-right-linear" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+                </a>
+                <p class="text-sm text-slate-500 mt-2">Free 30-minute Discovery Call. No pressure. No pitch.</p>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="relative z-10 pb-8 flex flex-col items-center gap-2 opacity-50" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-500"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+    </section>
+
+    <!-- The Problem Section -->
+    <section id="the-problem" class="py-24 md:py-32 border-y border-slate-200" style="background: #FAFBFD;">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
+                <!-- Left: heading + context -->
+                <div class="lg:col-span-5">
+                    <h2 class="reveal font-medium text-slate-900 mb-6">You've Heard the Hype. Now You Need the Truth.</h2>
+                    <p class="reveal delay-100 text-slate-600 text-lg leading-relaxed">
+                        Every vendor, every LinkedIn post, every conference is telling you the same thing: <em>"You need AI."</em> But nobody is helping you answer the three questions that actually matter.
+                    </p>
+                </div>
+
+                <!-- Right: the three questions, typographic -->
+                <div class="lg:col-span-7 space-y-10">
+                    <div class="reveal delay-100 flex items-baseline gap-5">
+                        <span class="text-6xl md:text-7xl font-medium text-brand-teal/20 leading-none shrink-0" style="font-family: 'Fraunces', Georgia, serif;">1</span>
+                        <div>
+                            <h3 class="text-2xl font-medium text-slate-900 mb-2" style="font-size: clamp(1.5rem, 2vw + 0.5rem, 2rem) !important;">Should I?</h3>
+                            <p class="text-slate-600 text-base leading-relaxed">Is an AI agent even feasible for my business — given my processes, my team, and my resources?</p>
+                        </div>
+                    </div>
+
+                    <div class="reveal delay-200 flex items-baseline gap-5">
+                        <span class="text-6xl md:text-7xl font-medium text-brand-teal/20 leading-none shrink-0" style="font-family: 'Fraunces', Georgia, serif;">2</span>
+                        <div>
+                            <h3 class="text-2xl font-medium text-slate-900 mb-2" style="font-size: clamp(1.5rem, 2vw + 0.5rem, 2rem) !important;">Where?</h3>
+                            <p class="text-slate-600 text-base leading-relaxed">Which specific tasks and processes would benefit most?</p>
+                        </div>
+                    </div>
+
+                    <div class="reveal delay-300 flex items-baseline gap-5">
+                        <span class="text-6xl md:text-7xl font-medium text-brand-teal/20 leading-none shrink-0" style="font-family: 'Fraunces', Georgia, serif;">3</span>
+                        <div>
+                            <h3 class="text-2xl font-medium text-slate-900 mb-2" style="font-size: clamp(1.5rem, 2vw + 0.5rem, 2rem) !important;">How much?</h3>
+                            <p class="text-slate-600 text-base leading-relaxed">What's the actual financial return — in hours saved and dollars earned back?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal delay-400 mt-20 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-brand-teal/[0.06] border-2 border-brand-teal/30 rounded-2xl p-8 lg:p-10">
+                <div class="lg:col-span-8">
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        The enterprise world has $40,000–$175,000 readiness assessments from Deloitte and McKinsey. You have... Google and Reddit threads.
+                    </p>
+                </div>
+                <div class="lg:col-span-4 lg:text-right">
+                    <p class="text-xl font-medium text-slate-900 relative inline-block hand-circle" style="font-family: 'Fraunces', Georgia, serif;">
+                        That's the gap.<br>That's why we exist.
+                        <svg viewBox="0 0 340 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M290 8C320 10 338 20 335 32C332 44 300 55 230 56C160 57 40 54 15 40C-5 28 10 12 60 7C110 2 220 2 290 8Z" stroke="#3795B7" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-24 md:py-40 relative">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16 max-w-2xl mx-auto">
+                <h2 class="reveal font-medium mb-6 text-slate-900">Process First. AI Second. Here's How.</h2>
+                <p class="reveal delay-100 text-slate-600 text-lg leading-relaxed">
+                    Everyone else leads with the technology: "Here's what AI can do!"
+                    We lead with your business: <span class="font-medium text-slate-900">"Here's how your business actually works."</span>
+                </p>
+                <p class="reveal delay-200 text-slate-500 text-base leading-relaxed mt-4">
+                    Our methodology is rooted in Lean Manufacturing — specifically Value Stream Process Mapping. We don't start with AI capabilities. We start with a map of your actual workflow.
+                </p>
+            </div>
+
+            <div class="relative space-y-0 max-w-2xl mx-auto">
+                <!-- Continuous vertical line behind circles: starts at first circle center, ends at last -->
+                <div class="absolute left-[27px] top-[28px] w-0.5 z-0" id="timeline-line" style="background: linear-gradient(to bottom, #3795B7 0%, #e2e8f0 30%, #e2e8f0 70%, #3795B7 100%);"></div>
+
+                <!-- Step 1 -->
+                <div class="reveal relative flex gap-6 md:gap-8 pb-12">
+                    <div class="flex flex-col items-center shrink-0">
+                        <div class="step-circle w-14 h-14 rounded-full bg-white border-2 border-brand-teal flex items-center justify-center font-bold text-brand-teal text-lg z-10">1</div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-medium text-slate-900 mb-2">We Map Your Processes</h3>
+                        <p class="text-base text-slate-600 leading-relaxed">We walk through your actual workflows — not from a template, but from conversation. We document how your business really runs.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="reveal delay-100 relative flex gap-6 md:gap-8 pb-12">
+                    <div class="flex flex-col items-center shrink-0">
+                        <div class="step-circle w-14 h-14 rounded-full bg-white border-2 border-brand-teal flex items-center justify-center font-bold text-brand-teal text-lg z-10">2</div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-medium text-slate-900 mb-2">We Build Your SOPs</h3>
+                        <p class="text-base text-slate-600 leading-relaxed">Every process gets documented: what triggers it, the steps involved, the decision points, the tools used, and how much time it takes.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="reveal delay-200 relative flex gap-6 md:gap-8 pb-12">
+                    <div class="flex flex-col items-center shrink-0">
+                        <div class="step-circle w-14 h-14 rounded-full bg-white border-2 border-brand-teal flex items-center justify-center font-bold text-brand-teal text-lg z-10">3</div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-medium text-slate-900 mb-2">We Score for AI Eligibility</h3>
+                        <p class="text-base text-slate-600 leading-relaxed">Our proprietary AI Eligibility Matrix scores each task on five criteria. Tasks that score high are strong candidates for AI automation. Most businesses discover 30–40% of their administrative tasks qualify.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="reveal delay-300 relative flex gap-6 md:gap-8 pb-12">
+                    <div class="flex flex-col items-center shrink-0">
+                        <div class="step-circle w-14 h-14 rounded-full bg-white border-2 border-brand-teal flex items-center justify-center font-bold text-brand-teal text-lg z-10">4</div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-medium text-slate-900 mb-2">We Calculate the Value</h3>
+                        <p class="text-base text-slate-600 leading-relaxed">We monetize the time you'd recover. We subtract the cost of AI tools. We give you a real number — not a guess.</p>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="reveal delay-400 relative flex gap-6 md:gap-8">
+                    <div class="flex flex-col items-center shrink-0">
+                        <div class="step-circle w-14 h-14 rounded-full bg-white border-2 border-brand-teal flex items-center justify-center font-bold text-brand-teal text-lg z-10">5</div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-medium text-slate-900 mb-2">You Get a Clear Recommendation</h3>
+                        <p class="text-base text-slate-600 leading-relaxed">Go. Go with caveats. Not yet. Or no. Backed by your own process data, not a sales pitch.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal mt-16 max-w-2xl mx-auto bg-brand-teal/[0.06] border-2 border-brand-teal/20 rounded-2xl p-8 text-center">
+                <p class="text-2xl font-medium text-slate-900 mb-4" style="font-family: 'Fraunces', Georgia, serif;">The best part?</p>
+                <p class="text-slate-600 leading-relaxed">
+                    Even if you decide AI isn't right for you today, you walk away with a process map and documented SOPs that make your business easier to run, easier to delegate, and easier to scale.
+                </p>
+                <p class="text-brand-teal font-medium mt-4 text-lg" style="font-family: 'Fraunces', Georgia, serif;">The assessment pays for itself either way.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Get Section -->
+    <section id="what-you-get" class="py-24 md:py-32 text-white relative" style="background: #132640;">
+        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-500/0 via-amber-500 to-amber-500/0"></div>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16 max-w-2xl">
+                <h2 class="reveal font-medium mb-6">Two Products. Total Clarity.</h2>
+                <p class="reveal delay-100 text-slate-400 text-lg leading-relaxed">
+                    Every engagement produces two deliverables — both yours to keep, regardless of the AI recommendation.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <!-- Product 1 -->
+                <div class="reveal delay-100 rounded-2xl p-8 border border-white/10" style="background: rgba(255,255,255,0.05);">
+                    <div class="text-amber-400 text-xs font-semibold tracking-wider mb-4 uppercase">Product 1</div>
+                    <h3 class="text-2xl font-medium mb-4">Client Process Map with Identified SOPs</h3>
+                    <p class="text-slate-400 text-base mb-8 leading-relaxed">
+                        A visual map of how your business actually works — plus documented Standard Operating Procedures for every major process we identify.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3795B7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 mt-1"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span class="text-slate-300 text-sm leading-relaxed">Visual Value Stream Process Map of your core business workflows</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3795B7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 mt-1"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span class="text-slate-300 text-sm leading-relaxed">Lightweight SOPs for each process: triggers, steps, decision points, tools, time estimates</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3795B7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 mt-1"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span class="text-slate-300 text-sm leading-relaxed">Pain points and bottlenecks identified</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3795B7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 mt-1"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span class="text-slate-300 text-sm leading-relaxed">A document you can use immediately — for hiring, training, delegation, and scaling</span>
+                        </li>
+                    </ul>
+                    <div class="mt-8 p-4 rounded-xl border border-white/10" style="background: rgba(0,0,0,0.2);">
+                        <p class="text-slate-400 text-sm italic">"I didn't realize how much was in my head."</p>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="reveal delay-200 rounded-2xl p-8 border border-white/10" style="background: rgba(255,255,255,0.05);">
+                    <div class="text-amber-400 text-xs font-semibold tracking-wider mb-4 uppercase">Product 2</div>
+                    <h3 class="text-2xl font-medium mb-4">AI ROI Position</h3>
+                    <p class="text-slate-400 text-base mb-8 leading-relaxed">
+                        A clear, honest, one-page assessment of whether AI makes financial sense for your business — and where.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3795B7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 mt-1"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span class="text-slate-300 text-sm leading-relaxed">AI Eligibility Scorecard: every task scored on 5 criteria</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3795B7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 mt-1"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span class="text-slate-300 text-sm leading-relaxed">Time savings calculation: hours per week you'd recover</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3795B7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 mt-1"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span class="text-slate-300 text-sm leading-relaxed">Financial ROI projection: dollars saved vs. cost of AI</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3795B7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 mt-1"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span class="text-slate-300 text-sm leading-relaxed">Net value and payback period</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3795B7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 mt-1"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span class="text-slate-300 text-sm leading-relaxed">Clear recommendation: Go / Go with Caveats / Not Yet / No</span>
+                        </li>
+                    </ul>
+                    <div class="mt-8 p-4 rounded-xl border border-white/10" style="background: rgba(0,0,0,0.2);">
+                        <p class="text-slate-400 text-sm">No jargon. No fluff. One page. A number you can take to your partner, your accountant, or your board.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal delay-300 grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-white/10 pt-16">
+                <div>
+                    <h4 class="text-lg font-medium text-white mb-2" style="font-family: 'Fraunces', Georgia, serif;">How long does it take?</h4>
+                    <p class="text-slate-400 leading-relaxed">2–3 weeks from kickoff to delivery. Two meetings (one to discover, one to deliver) with our analysis in between.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-medium text-white mb-2" style="font-family: 'Fraunces', Georgia, serif;">How much does it cost?</h4>
+                    <p class="text-slate-400 leading-relaxed">Assessments start at $1,500. A fraction of the $40,000+ that enterprise consulting firms charge — because small businesses deserve the same clarity.</p>
+                </div>
+            </div>
+
+            <div class="reveal delay-400 mt-16">
+                <a href="#start-a-conversation" class="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-medium text-base transition-colors group">
+                    Let's find out if AI is worth it for your business
+                    <iconify-icon icon="solar:arrow-right-linear" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+            <div class="reveal lg:col-span-7">
+                <h2 class="font-medium text-slate-900 mb-8">Built in Practice, Not in Theory</h2>
+                <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                    This methodology wasn't designed in a lab. It was built in practice.
+                </p>
+                <p class="text-slate-600 text-base leading-relaxed mb-6">
+                    Jeff Rorabaugh, founder of Clear-Path AI Consulting, needed to determine where an AI agent could support his own consulting business. So he:
+                </p>
+
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-start gap-3 text-slate-600">
+                        <iconify-icon icon="solar:check-circle-linear" class="text-brand-teal text-xl shrink-0 mt-0.5"></iconify-icon> Mapped his entire business process
+                    </li>
+                    <li class="flex items-start gap-3 text-slate-600">
+                        <iconify-icon icon="solar:check-circle-linear" class="text-brand-teal text-xl shrink-0 mt-0.5"></iconify-icon> Built 75+ SOPs from that map
+                    </li>
+                    <li class="flex items-start gap-3 text-slate-600">
+                        <iconify-icon icon="solar:check-circle-linear" class="text-brand-teal text-xl shrink-0 mt-0.5"></iconify-icon> Scored each task for AI eligibility
+                    </li>
+                    <li class="flex items-start gap-3 text-slate-600">
+                        <iconify-icon icon="solar:check-circle-linear" class="text-brand-teal text-xl shrink-0 mt-0.5"></iconify-icon> Calculated the time savings and financial impact
+                    </li>
+                    <li class="flex items-start gap-3 text-slate-600">
+                        <iconify-icon icon="solar:check-circle-linear" class="text-brand-teal text-xl shrink-0 mt-0.5"></iconify-icon> Deployed an AI agent on the eligible tasks
+                    </li>
+                </ul>
+
+                <!-- Hero stat callout -->
+                <div class="flex items-center gap-6 bg-brand-teal/[0.06] border border-brand-teal/20 rounded-2xl p-6 mb-8">
+                    <div class="shrink-0 text-center">
+                        <span class="text-5xl font-medium text-brand-teal leading-none" style="font-family: 'Fraunces', Georgia, serif;" data-countup="20">20+</span>
+                        <p class="text-xs font-semibold text-amber-600 uppercase tracking-wider mt-1">hrs/week</p>
+                    </div>
+                    <div>
+                        <p class="text-slate-800 font-medium mb-1">The result:</p>
+                        <p class="text-slate-600 text-sm leading-relaxed">A system that handles email monitoring, client pipeline tracking, document generation, scheduling, and research.</p>
+                    </div>
+                </div>
+
+                <!-- Pullquote: the aha moment -->
+                <blockquote class="border-l-4 border-brand-teal pl-6 py-2 my-10">
+                    <p class="text-xl md:text-2xl font-normal text-slate-900 leading-snug italic">
+                        The methodology was more valuable than the AI agent itself.
+                    </p>
+                </blockquote>
+
+                <p class="text-slate-600 text-base leading-relaxed">
+                    Any business could benefit from this process — whether they deploy an AI agent or not. The process map and SOPs have value regardless. That realization is Clear-Path AI Consulting.
+                </p>
+            </div>
+
+            <!-- Jeff card -->
+            <div class="reveal delay-200 lg:col-span-5 rounded-2xl overflow-hidden border border-slate-200">
+                <div class="h-2 bg-brand-teal"></div>
+                <div class="p-8">
+                    <img src="images/jeff-headshot.jpg" alt="Jeff Rorabaugh, founder of Clear-Path AI Consulting" class="w-28 h-28 rounded-full object-cover mb-6 border-4 border-brand-teal/20" loading="lazy">
+                    <h3 class="text-xl font-medium text-slate-900 mb-4">About Jeff</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        30+ years of organizational leadership. Founder of a camp culture consulting firm. Executive Director of a global nonprofit. A business operator who discovered AI's value through his own process mapping work — not a technologist selling tools.
+                    </p>
+                    <div class="bg-brand-teal/[0.06] rounded-xl p-4">
+                        <p class="text-slate-900 font-medium text-sm" style="font-family: 'Fraunces', Georgia, serif;">
+                            Jeff speaks the language of small business owners because he is one.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="start-a-conversation" class="py-32 md:py-44 relative text-white overflow-hidden text-center" style="background: #0F1D35;">
+        <div class="absolute inset-0 opacity-[0.08]" aria-hidden="true">
+            <img src="images/cta-bg.webp" alt="" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="relative z-10 max-w-3xl mx-auto px-6">
+            <h2 class="reveal font-medium mb-6">Ready to Find Out?</h2>
+            
+            <p class="reveal delay-100 text-lg text-slate-400 mb-10 leading-relaxed max-w-2xl mx-auto">
+                Book a free 30-minute Discovery Conversation. We'll talk about your business, where your time goes, and whether AI might be worth exploring.
+            </p>
+
+            <div class="reveal delay-200 flex flex-col items-center gap-6">
+                <a href="https://calendly.com" target="_blank" rel="noopener" class="inline-flex items-center justify-center h-14 px-10 rounded-full bg-amber-500 text-slate-900 font-medium hover:bg-amber-600 shadow-sm text-lg cta-btn">
+                    Start a Conversation <iconify-icon icon="solar:arrow-right-linear" class="ml-2"></iconify-icon>
+                </a>
+                <p class="text-sm text-slate-400">
+                    No pitch. No pressure. Just an honest conversation.<br>
+                    If there's something there, we'll tell you. If there isn't, we'll tell you that too.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 md:py-28 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="reveal font-medium mb-12 text-slate-900">Frequently Asked Questions</h2>
+            
+            <div class="reveal space-y-4" id="faq-list">
+                <div class="faq-item bg-white rounded-xl border border-slate-200 shadow-sm">
+                    <button class="faq-trigger flex justify-between items-center w-full p-6 cursor-pointer font-medium text-lg text-slate-900 hover:text-brand-teal transition-colors text-left" style="font-family: 'Fraunces', Georgia, serif;" aria-expanded="false">
+                        What if AI isn't right for my business?
+                        <span class="relative shrink-0 ml-4">
+                            <iconify-icon icon="solar:add-circle-linear" class="faq-icon-plus text-slate-400 text-xl"></iconify-icon>
+                            <iconify-icon icon="solar:minus-circle-linear" class="faq-icon-minus text-brand-teal text-xl"></iconify-icon>
+                        </span>
+                    </button>
+                    <div class="faq-content">
+                        <div class="faq-content-inner">
+                            <div class="px-6 pb-6 text-slate-600 text-base leading-relaxed border-t border-slate-100 pt-4 mx-6 mb-0">
+                                Then we'll tell you. And you'll still walk away with a process map and documented SOPs that have independent value for hiring, training, and scaling. The assessment pays for itself.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-xl border border-slate-200 shadow-sm">
+                    <button class="faq-trigger flex justify-between items-center w-full p-6 cursor-pointer font-medium text-lg text-slate-900 hover:text-brand-teal transition-colors text-left" style="font-family: 'Fraunces', Georgia, serif;" aria-expanded="false">
+                        How is this different from an AI vendor?
+                        <span class="relative shrink-0 ml-4">
+                            <iconify-icon icon="solar:add-circle-linear" class="faq-icon-plus text-slate-400 text-xl"></iconify-icon>
+                            <iconify-icon icon="solar:minus-circle-linear" class="faq-icon-minus text-brand-teal text-xl"></iconify-icon>
+                        </span>
+                    </button>
+                    <div class="faq-content">
+                        <div class="faq-content-inner">
+                            <div class="px-6 pb-6 text-slate-600 text-base leading-relaxed border-t border-slate-100 pt-4 mx-6 mb-0">
+                                AI vendors are selling tools. We're selling clarity. We don't make money if you buy an AI platform. We make money by giving you an honest assessment of whether you should.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-xl border border-slate-200 shadow-sm">
+                    <button class="faq-trigger flex justify-between items-center w-full p-6 cursor-pointer font-medium text-lg text-slate-900 hover:text-brand-teal transition-colors text-left" style="font-family: 'Fraunces', Georgia, serif;" aria-expanded="false">
+                        Do you build or install AI agents?
+                        <span class="relative shrink-0 ml-4">
+                            <iconify-icon icon="solar:add-circle-linear" class="faq-icon-plus text-slate-400 text-xl"></iconify-icon>
+                            <iconify-icon icon="solar:minus-circle-linear" class="faq-icon-minus text-brand-teal text-xl"></iconify-icon>
+                        </span>
+                    </button>
+                    <div class="faq-content">
+                        <div class="faq-content-inner">
+                            <div class="px-6 pb-6 text-slate-600 text-base leading-relaxed border-t border-slate-100 pt-4 mx-6 mb-0">
+                                Our core service is the assessment and recommendation. For clients who want implementation support, we offer a Guided Implementation tier or refer you to a trusted implementer.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-xl border border-slate-200 shadow-sm">
+                    <button class="faq-trigger flex justify-between items-center w-full p-6 cursor-pointer font-medium text-lg text-slate-900 hover:text-brand-teal transition-colors text-left" style="font-family: 'Fraunces', Georgia, serif;" aria-expanded="false">
+                        How long does the process take?
+                        <span class="relative shrink-0 ml-4">
+                            <iconify-icon icon="solar:add-circle-linear" class="faq-icon-plus text-slate-400 text-xl"></iconify-icon>
+                            <iconify-icon icon="solar:minus-circle-linear" class="faq-icon-minus text-brand-teal text-xl"></iconify-icon>
+                        </span>
+                    </button>
+                    <div class="faq-content">
+                        <div class="faq-content-inner">
+                            <div class="px-6 pb-6 text-slate-600 text-base leading-relaxed border-t border-slate-100 pt-4 mx-6 mb-0">
+                                2–3 weeks from kickoff to delivery. Two meetings with analysis in between.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-xl border border-slate-200 shadow-sm">
+                    <button class="faq-trigger flex justify-between items-center w-full p-6 cursor-pointer font-medium text-lg text-slate-900 hover:text-brand-teal transition-colors text-left" style="font-family: 'Fraunces', Georgia, serif;" aria-expanded="false">
+                        What does it cost?
+                        <span class="relative shrink-0 ml-4">
+                            <iconify-icon icon="solar:add-circle-linear" class="faq-icon-plus text-slate-400 text-xl"></iconify-icon>
+                            <iconify-icon icon="solar:minus-circle-linear" class="faq-icon-minus text-brand-teal text-xl"></iconify-icon>
+                        </span>
+                    </button>
+                    <div class="faq-content">
+                        <div class="faq-content-inner">
+                            <div class="px-6 pb-6 text-slate-600 text-base leading-relaxed border-t border-slate-100 pt-4 mx-6 mb-0">
+                                Assessments start at $1,500. That's a fraction of the $40,000+ that enterprise firms charge.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-xl border border-slate-200 shadow-sm">
+                    <button class="faq-trigger flex justify-between items-center w-full p-6 cursor-pointer font-medium text-lg text-slate-900 hover:text-brand-teal transition-colors text-left" style="font-family: 'Fraunces', Georgia, serif;" aria-expanded="false">
+                        What kind of businesses do you work with?
+                        <span class="relative shrink-0 ml-4">
+                            <iconify-icon icon="solar:add-circle-linear" class="faq-icon-plus text-slate-400 text-xl"></iconify-icon>
+                            <iconify-icon icon="solar:minus-circle-linear" class="faq-icon-minus text-brand-teal text-xl"></iconify-icon>
+                        </span>
+                    </button>
+                    <div class="faq-content">
+                        <div class="faq-content-inner">
+                            <div class="px-6 pb-6 text-slate-600 text-base leading-relaxed border-t border-slate-100 pt-4 mx-6 mb-0">
+                                Service-based small businesses with 1–50 employees and $250K–$5M in revenue. Consulting firms, healthcare practices, real estate agencies, nonprofits, professional services, and trades.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-xl border border-slate-200 shadow-sm">
+                    <button class="faq-trigger flex justify-between items-center w-full p-6 cursor-pointer font-medium text-lg text-slate-900 hover:text-brand-teal transition-colors text-left" style="font-family: 'Fraunces', Georgia, serif;" aria-expanded="false">
+                        Can I take the assessment results to someone else for implementation?
+                        <span class="relative shrink-0 ml-4">
+                            <iconify-icon icon="solar:add-circle-linear" class="faq-icon-plus text-slate-400 text-xl"></iconify-icon>
+                            <iconify-icon icon="solar:minus-circle-linear" class="faq-icon-minus text-brand-teal text-xl"></iconify-icon>
+                        </span>
+                    </button>
+                    <div class="faq-content">
+                        <div class="faq-content-inner">
+                            <div class="px-6 pb-6 text-slate-600 text-base leading-relaxed border-t border-slate-100 pt-4 mx-6 mb-0">
+                                Absolutely. The deliverables are yours. Use them however you want.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 py-12" style="background: #FAFBFD;">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row md:items-start md:justify-between gap-8">
+            <!-- Left: Logo + tagline -->
+            <div>
+                <img src="logo.svg" alt="Clear-Path AI Consulting" class="h-8 w-auto mb-3">
+                <p class="text-sm text-brand-teal font-medium tracking-wide uppercase">Process First. AI Second.</p>
+            </div>
+
+            <!-- Right: Copyright + credit -->
+            <div class="md:text-right">
+                <p class="text-xs text-slate-500">
+                    © <span id="copyright-year">2026</span> Clear-Path AI Consulting — A service of Happy Camper Consulting, LLC
+                </p>
+                <p class="text-xs text-slate-400 mt-1">
+                    Website by <a href="https://townsite.co" target="_blank" rel="noopener" class="text-slate-500 hover:text-brand-teal transition-colors">Townsite</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for Reveal Animations
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    // Optional: stop observing once revealed
+                    // revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Hero: mouse parallax + cursor glow
+        const heroSection = document.querySelector('section');
+        const parallaxBg = document.getElementById('hero-parallax');
+        const heroGlow = document.getElementById('hero-glow');
+        if (heroSection && parallaxBg && heroGlow) {
+            heroSection.addEventListener('mousemove', (e) => {
+                const rect = heroSection.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width - 0.5;
+                const y = (e.clientY - rect.top) / rect.height - 0.5;
+                parallaxBg.style.transform = `translate(${x * 20}px, ${y * 15}px)`;
+                heroGlow.style.left = e.clientX - rect.left + 'px';
+                heroGlow.style.top = e.clientY - rect.top + 'px';
+                heroGlow.classList.add('visible');
+            });
+            heroSection.addEventListener('mouseleave', () => {
+                parallaxBg.style.transform = 'translate(0px, 0px)';
+                heroGlow.classList.remove('visible');
+            });
+        }
+
+
+        // Nav scroll transition
+        const mainNav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                mainNav.classList.add('nav-scrolled');
+            } else {
+                mainNav.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const openIcon = menuBtn.querySelector('.menu-open-icon');
+        const closeIcon = menuBtn.querySelector('.menu-close-icon');
+        let menuOpen = false;
+
+        function toggleMenu(forceClose) {
+            menuOpen = forceClose ? false : !menuOpen;
+            if (menuOpen) {
+                mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+                mobileMenu.style.opacity = '1';
+            } else {
+                mobileMenu.style.maxHeight = '0';
+                mobileMenu.style.opacity = '0';
+            }
+            openIcon.classList.toggle('hidden', menuOpen);
+            closeIcon.classList.toggle('hidden', !menuOpen);
+            menuBtn.setAttribute('aria-expanded', menuOpen);
+        }
+
+        menuBtn.addEventListener('click', () => toggleMenu());
+
+        // Set timeline line height to stop at circle 5
+        window.addEventListener('load', function() {
+            const line = document.getElementById('timeline-line');
+            const container = line.parentElement;
+            const steps = container.querySelectorAll('[class*="reveal"]');
+            const firstCircle = steps[0].querySelector('.rounded-full');
+            const lastCircle = steps[steps.length - 1].querySelector('.rounded-full');
+            const top = firstCircle.getBoundingClientRect().top - container.getBoundingClientRect().top + 20;
+            const bottom = lastCircle.getBoundingClientRect().top - container.getBoundingClientRect().top + 20;
+            line.style.top = top + 'px';
+            line.style.height = (bottom - top) + 'px';
+        });
+
+        // Count-up animation for stat
+        const statEl = document.querySelector('[data-countup]');
+        if (statEl) {
+            const target = parseInt(statEl.dataset.countup);
+            let counted = false;
+            const countObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !counted) {
+                        counted = true;
+                        statEl.textContent = '0+';
+                        let current = 0;
+                        const duration = 1200;
+                        const step = duration / target;
+                        const counter = setInterval(() => {
+                            current++;
+                            statEl.textContent = current + '+';
+                            if (current >= target) clearInterval(counter);
+                        }, step);
+                    }
+                });
+            }, { threshold: 0.5 });
+            countObserver.observe(statEl);
+        }
+
+        // Blockquote border draw-in on scroll
+        const blockquotes = document.querySelectorAll('blockquote');
+        const bqObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('drawn');
+            });
+        }, { threshold: 0.5 });
+        blockquotes.forEach(bq => bqObserver.observe(bq));
+
+        // Hand-drawn circle animation on scroll
+        const circleEls = document.querySelectorAll('.hand-circle');
+        const circleObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('drawn');
+                }
+            });
+        }, { threshold: 0.5 });
+        circleEls.forEach(el => circleObserver.observe(el));
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-trigger').forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const item = trigger.closest('.faq-item');
+                const isActive = item.classList.contains('active');
+
+                // Close all others
+                document.querySelectorAll('.faq-item.active').forEach(open => {
+                    if (open !== item) {
+                        open.classList.remove('active');
+                        open.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+                    }
+                });
+
+                // Toggle this one
+                item.classList.toggle('active', !isActive);
+                trigger.setAttribute('aria-expanded', !isActive);
+            });
+        });
+
+        // Dynamic copyright year
+        const yearEl = document.getElementById('copyright-year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => toggleMenu(true));
+        });
+    </script>
+
+</body></html>
