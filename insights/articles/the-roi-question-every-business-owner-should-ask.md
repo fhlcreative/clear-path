@@ -3,7 +3,7 @@ title: The ROI Question Every Business Owner Should Ask
 date: 2026-03-07
 category: Strategy
 featured_image: https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80
-excerpt: "Will AI save me money?" is the wrong first question. Here's what to ask instead — and how to get an honest answer.
+excerpt: Will AI save me money? is the wrong first question. Here's what to ask instead — and how to get an honest answer.
 ---
 
 ## "Will AI save me money?"
