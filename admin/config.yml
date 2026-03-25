@@ -1,0 +1,32 @@
+backend:
+  name: github
+  repo: fhlcreative/clear-path
+  branch: main
+  base_url: https://shouldigetai.com
+  auth_endpoint: api/auth
+
+media_folder: "images/articles"
+public_folder: "/images/articles"
+
+collections:
+  - name: "insights"
+    label: "Insights Articles"
+    folder: "insights/articles"
+    create: true
+    slug: "{{slug}}"
+    sortable_fields: ["title", "date", "category"]
+    view_filters:
+      - { label: "Strategy", field: "category", pattern: "Strategy" }
+      - { label: "Operations", field: "category", pattern: "Operations" }
+      - { label: "Implementation", field: "category", pattern: "Implementation" }
+      - { label: "Industry Insights", field: "category", pattern: "Industry Insights" }
+    view_groups:
+      - { label: "Category", field: "category" }
+      - { label: "Year", field: "date", pattern: "\\d{4}" }
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "MM/DD/YYYY", time_format: false }
+      - { label: "Category", name: "category", widget: "select", options: ["Strategy", "Operations", "Implementation", "Industry Insights"] }
+      - { label: "Featured Image", name: "featured_image", widget: "image", required: false }
+      - { label: "Excerpt", name: "excerpt", widget: "text", required: false, hint: "Short summary for article cards (1-2 sentences)" }
+      - { label: "Body", name: "body", widget: "markdown" }

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <title>Insights — Clear-Path AI Consulting</title>
+    <meta name="description" content="Articles on AI strategy, process optimization, and practical implementation guidance for small business owners — from Clear-Path AI Consulting.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://shouldigetai.com/insights/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Insights — Clear-Path AI Consulting">
+    <meta property="og:description" content="Articles on AI strategy, process optimization, and practical implementation guidance for small business owners.">
+    <meta property="og:image" content="https://shouldigetai.com/logo.svg">
+    <meta property="og:site_name" content="Clear-Path AI Consulting">
+    <meta property="og:url" content="https://shouldigetai.com/insights/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Insights — Clear-Path AI Consulting">
+    <meta name="twitter:description" content="Articles on AI strategy, process optimization, and practical implementation guidance for small business owners.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#1B2E4F',
+                            teal: '#3795B7',
+                            'teal-light': '#EBF5F9',
+                            'teal-hover': '#2D7A99',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Iconify -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "CollectionPage",
+                "name": "Insights — Clear-Path AI Consulting",
+                "description": "Articles on AI strategy, process optimization, and practical implementation guidance for small business owners.",
+                "url": "https://shouldigetai.com/insights/",
+                "publisher": {
+                    "@type": "ProfessionalService",
+                    "name": "Clear-Path AI Consulting",
+                    "url": "https://shouldigetai.com"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://shouldigetai.com/" },
+                    { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://shouldigetai.com/insights/" }
+                ]
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #F7F9FB;
+            color: #1C2B3A;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Fraunces', Georgia, serif;
+        }
+
+        /* Focus indicators */
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid #3795B7;
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: currentColor;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Skip to content -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:bg-white focus:text-slate-900 focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:text-sm focus:font-medium">Skip to main content</a>
+
+    <!-- Navigation -->
+    <header>
+    <nav class="bg-brand-navy" aria-label="Main navigation">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="../" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                <img src="../logo-dark.svg" alt="Clear-Path AI Consulting" class="h-8 md:h-10 w-auto">
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="../#the-problem" class="nav-link relative text-sm font-medium text-white/70 hover:text-white transition-colors">The Problem</a>
+                <a href="../#how-it-works" class="nav-link relative text-sm font-medium text-white/70 hover:text-white transition-colors">How It Works</a>
+                <a href="../#what-you-get" class="nav-link relative text-sm font-medium text-white/70 hover:text-white transition-colors">What You Get</a>
+                <a href="../#about" class="nav-link relative text-sm font-medium text-white/70 hover:text-white transition-colors">About</a>
+                <a href="./" class="nav-link relative text-sm font-medium text-white transition-colors">Insights</a>
+            </div>
+
+            <div class="hidden md:flex items-center">
+                <a href="https://calendly.com/jeff-happycamperconsulting/clear-path-discovery" target="_blank" rel="noopener" class="inline-flex items-center justify-center h-10 px-6 rounded-full bg-amber-500 hover:bg-amber-600 text-slate-900 font-medium text-sm shadow-sm transition-all hover:-translate-y-0.5">
+                    Start a Conversation
+                </a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-white/80 hover:text-white" aria-label="Toggle menu" aria-expanded="false">
+                <iconify-icon icon="solar:hamburger-menu-linear" class="text-2xl menu-open-icon"></iconify-icon>
+                <iconify-icon icon="solar:close-circle-linear" class="text-2xl menu-close-icon hidden"></iconify-icon>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden overflow-hidden" style="max-height: 0; opacity: 0; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;">
+            <div class="bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-lg">
+                <div class="px-6 py-6 flex flex-col gap-1">
+                    <a href="../#the-problem" class="mobile-nav-link text-lg font-medium text-slate-700 hover:text-brand-teal py-3 border-b border-slate-100 transition-colors" style="font-family: 'Fraunces', Georgia, serif;">The Problem</a>
+                    <a href="../#how-it-works" class="mobile-nav-link text-lg font-medium text-slate-700 hover:text-brand-teal py-3 border-b border-slate-100 transition-colors" style="font-family: 'Fraunces', Georgia, serif;">How It Works</a>
+                    <a href="../#what-you-get" class="mobile-nav-link text-lg font-medium text-slate-700 hover:text-brand-teal py-3 border-b border-slate-100 transition-colors" style="font-family: 'Fraunces', Georgia, serif;">What You Get</a>
+                    <a href="../#about" class="mobile-nav-link text-lg font-medium text-slate-700 hover:text-brand-teal py-3 border-b border-slate-100 transition-colors" style="font-family: 'Fraunces', Georgia, serif;">About</a>
+                    <a href="./" class="mobile-nav-link text-lg font-medium text-brand-teal py-3 transition-colors" style="font-family: 'Fraunces', Georgia, serif;">Insights</a>
+                    <a href="https://calendly.com/jeff-happycamperconsulting/clear-path-discovery" target="_blank" rel="noopener" class="mobile-nav-link inline-flex items-center justify-center h-12 mt-4 rounded-full bg-amber-500 hover:bg-amber-600 text-slate-900 font-medium text-base" style="font-family: 'Outfit', sans-serif;">Start a Conversation</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+    <main>
+    <article>
+
+    <!-- Hero -->
+    <section class="bg-brand-navy py-24 md:py-32 text-center" id="main-content">
+        <h1 class="text-3xl md:text-5xl font-semibold text-white mb-4" style="font-family: 'Fraunces', Georgia, serif; letter-spacing: -0.02em;">Insights</h1>
+        <p class="text-lg text-white/50 max-w-lg mx-auto px-6" style="font-family: 'Outfit', sans-serif;">Practical thinking on AI strategy, process optimization, and making technology work for your business.</p>
+    </section>
+
+    <!-- Category Filters -->
+    <div class="max-w-5xl mx-auto px-6 pt-10 flex justify-center gap-3 flex-wrap" id="filters">
+        <button class="active text-xs font-semibold uppercase tracking-wider px-5 py-2 rounded-full border border-slate-200 bg-transparent text-slate-500 cursor-pointer transition-all hover:bg-brand-navy hover:text-white hover:border-brand-navy" data-category="all" style="font-family: 'Outfit', sans-serif;">All</button>
+        <button class="text-xs font-semibold uppercase tracking-wider px-5 py-2 rounded-full border border-slate-200 bg-transparent text-slate-500 cursor-pointer transition-all hover:bg-brand-navy hover:text-white hover:border-brand-navy" data-category="Strategy" style="font-family: 'Outfit', sans-serif;">Strategy</button>
+        <button class="text-xs font-semibold uppercase tracking-wider px-5 py-2 rounded-full border border-slate-200 bg-transparent text-slate-500 cursor-pointer transition-all hover:bg-brand-navy hover:text-white hover:border-brand-navy" data-category="Operations" style="font-family: 'Outfit', sans-serif;">Operations</button>
+        <button class="text-xs font-semibold uppercase tracking-wider px-5 py-2 rounded-full border border-slate-200 bg-transparent text-slate-500 cursor-pointer transition-all hover:bg-brand-navy hover:text-white hover:border-brand-navy" data-category="Implementation" style="font-family: 'Outfit', sans-serif;">Implementation</button>
+        <button class="text-xs font-semibold uppercase tracking-wider px-5 py-2 rounded-full border border-slate-200 bg-transparent text-slate-500 cursor-pointer transition-all hover:bg-brand-navy hover:text-white hover:border-brand-navy" data-category="Industry Insights" style="font-family: 'Outfit', sans-serif;">Industry Insights</button>
+    </div>
+
+    <!-- Articles Grid -->
+    <div class="max-w-5xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="articles-grid">
+        <!-- Articles injected by JS -->
+    </div>
+
+    </article>
+    </main>
+
+    <script>
+        var grid = document.getElementById('articles-grid');
+        var filters = document.getElementById('filters');
+
+        // Active filter button styles
+        var activeClasses = 'bg-brand-navy text-white border-brand-navy';
+        var inactiveClasses = 'bg-transparent text-slate-500 border-slate-200';
+
+        function setActiveButton(btn) {
+            filters.querySelectorAll('button').forEach(function(b) {
+                b.className = b.className.replace(/bg-brand-navy|text-white|border-brand-navy/g, '').trim();
+                b.classList.remove('active');
+                if (!b.className.includes('bg-transparent')) b.className += ' bg-transparent text-slate-500 border-slate-200';
+            });
+            btn.classList.add('active');
+            btn.className = btn.className.replace(/bg-transparent|text-slate-500|border-slate-200/g, '').trim();
+            btn.className += ' bg-brand-navy text-white border-brand-navy';
+        }
+
+        function renderArticles(articles, filter) {
+            grid.innerHTML = '';
+            var filtered = filter === 'all' ? articles : articles.filter(function(a) { return a.category === filter; });
+            filtered.sort(function(a, b) { return new Date(b.date) - new Date(a.date); });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '<div class="col-span-full text-center py-16"><p class="text-slate-400 text-lg">No articles yet. Check back soon.</p></div>';
+                return;
+            }
+
+            filtered.forEach(function(article) {
+                var card = document.createElement('a');
+                card.className = 'group block bg-white border border-slate-200 rounded-lg overflow-hidden transition-all hover:shadow-lg hover:-translate-y-0.5';
+                card.href = 'article.html?slug=' + article.slug;
+
+                var imageHtml = article.image
+                    ? '<img class="w-full aspect-video object-cover" src="' + article.image + '" alt="' + article.title + '" loading="lazy">'
+                    : '<div class="w-full aspect-video flex items-center justify-center bg-gradient-to-br from-brand-navy to-brand-teal text-white/80 px-6 text-center leading-tight" style="font-family: Fraunces, Georgia, serif; font-size: 1.125rem;">' + article.title + '</div>';
+
+                var dateObj = new Date(article.date + 'T12:00:00');
+                var dateStr = dateObj.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+                card.innerHTML = imageHtml +
+                    '<div class="p-6 flex flex-col flex-1">' +
+                        '<span class="text-xs font-semibold uppercase tracking-widest text-brand-teal mb-3" style="font-family: Outfit, sans-serif;">' + article.category + '</span>' +
+                        '<h2 class="text-xl font-semibold text-brand-navy mb-3 leading-tight group-hover:text-brand-teal transition-colors" style="font-family: Fraunces, Georgia, serif;">' + article.title + '</h2>' +
+                        '<p class="text-sm text-slate-500 leading-relaxed flex-1" style="font-family: Outfit, sans-serif;">' + (article.excerpt || '') + '</p>' +
+                        '<span class="text-xs text-slate-400 mt-4 pt-4 border-t border-slate-100 block" style="font-family: Outfit, sans-serif;">' + dateStr + '</span>' +
+                    '</div>';
+
+                grid.appendChild(card);
+            });
+        }
+
+        fetch('articles.json')
+            .then(function(r) { return r.json(); })
+            .then(function(articles) {
+                var params = new URLSearchParams(window.location.search);
+                var initialCategory = params.get('category') || 'all';
+
+                if (initialCategory !== 'all') {
+                    filters.querySelectorAll('button').forEach(function(b) {
+                        if (b.dataset.category === initialCategory) setActiveButton(b);
+                    });
+                }
+
+                renderArticles(articles, initialCategory);
+
+                filters.addEventListener('click', function(e) {
+                    if (e.target.tagName !== 'BUTTON') return;
+                    setActiveButton(e.target);
+                    renderArticles(articles, e.target.dataset.category);
+                });
+            });
+
+        // Mobile menu toggle
+        var menuBtn = document.getElementById('mobile-menu-btn');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var menuOpen = false;
+        menuBtn.addEventListener('click', function() {
+            menuOpen = !menuOpen;
+            if (menuOpen) {
+                mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+                mobileMenu.style.opacity = '1';
+            } else {
+                mobileMenu.style.maxHeight = '0';
+                mobileMenu.style.opacity = '0';
+            }
+            menuBtn.querySelector('.menu-open-icon').classList.toggle('hidden', menuOpen);
+            menuBtn.querySelector('.menu-close-icon').classList.toggle('hidden', !menuOpen);
+            menuBtn.setAttribute('aria-expanded', menuOpen);
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 py-12" style="background: #FAFBFD;">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row md:items-start md:justify-between gap-8">
+            <div>
+                <img src="../logo.svg" alt="Clear-Path AI Consulting" class="h-8 w-auto mb-3">
+                <p class="text-sm text-brand-teal font-medium tracking-wide uppercase">Process First. AI Second.</p>
+            </div>
+            <div class="md:text-right">
+                <p class="text-xs text-slate-500">
+                    &copy; <script>document.write(new Date().getFullYear())</script> Clear-Path AI Consulting &mdash; A service of Happy Camper Consulting, LLC
+                </p>
+                <p class="text-xs text-slate-400 mt-1">
+                    Website by <a href="https://townsite.co" target="_blank" rel="noopener" class="text-slate-500 hover:text-brand-teal transition-colors">Townsite</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

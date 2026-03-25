@@ -1,0 +1,7 @@
+{
+  "name": "clear-path",
+  "private": true,
+  "scripts": {
+    "build": "node build.js"
+  }
+}

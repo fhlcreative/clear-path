@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <title>Loading... — Clear-Path AI Consulting</title>
+    <meta name="robots" content="index, follow">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#1B2E4F',
+                            teal: '#3795B7',
+                            'teal-light': '#EBF5F9',
+                            'teal-hover': '#2D7A99',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Iconify -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <!-- Markdown parser -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #F7F9FB;
+            color: #1C2B3A;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Fraunces', Georgia, serif;
+        }
+
+        /* Focus indicators */
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid #3795B7;
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: currentColor;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+
+        /* Article body prose styles */
+        .article-body h2 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: clamp(1.5rem, 2.5vw, 1.875rem);
+            color: #1B2E4F;
+            margin: 2.5rem 0 1rem;
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+        }
+        .article-body h3 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: clamp(1.25rem, 2vw, 1.5rem);
+            color: #1B2E4F;
+            margin: 2rem 0 0.75rem;
+        }
+        .article-body p {
+            margin-bottom: 1.5rem;
+        }
+        .article-body strong {
+            color: #1B2E4F;
+        }
+        .article-body ol,
+        .article-body ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        .article-body li {
+            margin-bottom: 0.75rem;
+        }
+        .article-body blockquote {
+            border-left: 3px solid #3795B7;
+            padding: 1rem 1.5rem;
+            margin: 2rem 0;
+            background: #EBF5F9;
+            font-style: italic;
+            color: #1B2E4F;
+            border-radius: 0 6px 6px 0;
+        }
+        .article-body img {
+            max-width: 100%;
+            border-radius: 6px;
+            margin: 2rem 0;
+        }
+        .article-body a {
+            color: #3795B7;
+            text-decoration: underline;
+        }
+        .article-body a:hover {
+            color: #2D7A99;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Skip to content -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:bg-white focus:text-slate-900 focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:text-sm focus:font-medium">Skip to main content</a>
+
+    <!-- Navigation -->
+    <header>
+    <nav class="bg-brand-navy" aria-label="Main navigation">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="../" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                <img src="../logo-dark.svg" alt="Clear-Path AI Consulting" class="h-8 md:h-10 w-auto">
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="../#the-problem" class="nav-link relative text-sm font-medium text-white/70 hover:text-white transition-colors">The Problem</a>
+                <a href="../#how-it-works" class="nav-link relative text-sm font-medium text-white/70 hover:text-white transition-colors">How It Works</a>
+                <a href="../#what-you-get" class="nav-link relative text-sm font-medium text-white/70 hover:text-white transition-colors">What You Get</a>
+                <a href="../#about" class="nav-link relative text-sm font-medium text-white/70 hover:text-white transition-colors">About</a>
+                <a href="./" class="nav-link relative text-sm font-medium text-white transition-colors">Insights</a>
+            </div>
+
+            <div class="hidden md:flex items-center">
+                <a href="https://calendly.com/jeff-happycamperconsulting/clear-path-discovery" target="_blank" rel="noopener" class="inline-flex items-center justify-center h-10 px-6 rounded-full bg-amber-500 hover:bg-amber-600 text-slate-900 font-medium text-sm shadow-sm transition-all hover:-translate-y-0.5">
+                    Start a Conversation
+                </a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-white/80 hover:text-white" aria-label="Toggle menu" aria-expanded="false">
+                <iconify-icon icon="solar:hamburger-menu-linear" class="text-2xl menu-open-icon"></iconify-icon>
+                <iconify-icon icon="solar:close-circle-linear" class="text-2xl menu-close-icon hidden"></iconify-icon>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden overflow-hidden" style="max-height: 0; opacity: 0; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;">
+            <div class="bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-lg">
+                <div class="px-6 py-6 flex flex-col gap-1">
+                    <a href="../#the-problem" class="text-lg font-medium text-slate-700 hover:text-brand-teal py-3 border-b border-slate-100 transition-colors" style="font-family: 'Fraunces', Georgia, serif;">The Problem</a>
+                    <a href="../#how-it-works" class="text-lg font-medium text-slate-700 hover:text-brand-teal py-3 border-b border-slate-100 transition-colors" style="font-family: 'Fraunces', Georgia, serif;">How It Works</a>
+                    <a href="../#what-you-get" class="text-lg font-medium text-slate-700 hover:text-brand-teal py-3 border-b border-slate-100 transition-colors" style="font-family: 'Fraunces', Georgia, serif;">What You Get</a>
+                    <a href="../#about" class="text-lg font-medium text-slate-700 hover:text-brand-teal py-3 border-b border-slate-100 transition-colors" style="font-family: 'Fraunces', Georgia, serif;">About</a>
+                    <a href="./" class="text-lg font-medium text-brand-teal py-3 transition-colors" style="font-family: 'Fraunces', Georgia, serif;">Insights</a>
+                    <a href="https://calendly.com/jeff-happycamperconsulting/clear-path-discovery" target="_blank" rel="noopener" class="inline-flex items-center justify-center h-12 mt-4 rounded-full bg-amber-500 hover:bg-amber-600 text-slate-900 font-medium text-base" style="font-family: 'Outfit', sans-serif;">Start a Conversation</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+    <!-- Article Hero -->
+    <section class="bg-brand-navy py-24 md:py-32 text-center relative" id="main-content">
+        <a class="absolute top-24 left-6 md:left-[max(1.5rem,4vw)] text-sm font-semibold text-brand-teal no-underline hover:underline" href="index.html">&larr; Back to Insights</a>
+        <div class="text-xs font-semibold uppercase tracking-[0.15em] text-brand-teal mb-4" id="category" style="font-family: 'Outfit', sans-serif;"></div>
+        <h1 class="text-3xl md:text-5xl font-semibold text-white max-w-3xl mx-auto px-6 mb-6" style="font-family: 'Fraunces', Georgia, serif; line-height: 1.25; letter-spacing: -0.02em;" id="title">Loading...</h1>
+        <div class="text-sm text-white/40" id="date" style="font-family: 'Outfit', sans-serif;"></div>
+    </section>
+
+    <!-- Featured Image -->
+    <div class="max-w-4xl mx-auto px-6 -mt-24 relative z-10" id="featured-img-wrap" style="display:none;">
+        <img id="featured-img" src="" alt="" class="w-full aspect-video object-cover rounded-lg shadow-lg">
+    </div>
+
+    <main>
+    <article class="article-body max-w-3xl mx-auto px-6 py-16 text-lg leading-relaxed text-slate-700" id="content" style="font-family: 'Outfit', sans-serif;">
+        <p>Loading article...</p>
+    </article>
+    </main>
+
+    <script>
+        var params = new URLSearchParams(window.location.search);
+        var slug = params.get('slug');
+
+        function setMeta(name, content) {
+            var el = document.querySelector('meta[name="' + name + '"]');
+            if (!el) { el = document.createElement('meta'); el.setAttribute('name', name); document.head.appendChild(el); }
+            el.setAttribute('content', content);
+        }
+        function setOG(property, content) {
+            var el = document.querySelector('meta[property="' + property + '"]');
+            if (!el) { el = document.createElement('meta'); el.setAttribute('property', property); document.head.appendChild(el); }
+            el.setAttribute('content', content);
+        }
+        function setCanonical(href) {
+            var el = document.querySelector('link[rel="canonical"]');
+            if (!el) { el = document.createElement('link'); el.setAttribute('rel', 'canonical'); document.head.appendChild(el); }
+            el.setAttribute('href', href);
+        }
+
+        if (!slug) {
+            document.getElementById('content').innerHTML = '<p>Article not found.</p>';
+        } else {
+            fetch('articles/' + slug + '.md')
+                .then(function(r) { return r.text(); })
+                .then(function(text) {
+                    var parts = text.split('---');
+                    var frontMatter = {};
+                    if (parts.length >= 3) {
+                        parts[1].trim().split('\n').forEach(function(line) {
+                            var colon = line.indexOf(':');
+                            if (colon > -1) {
+                                var key = line.substring(0, colon).trim();
+                                var val = line.substring(colon + 1).trim().replace(/^["']|["']$/g, '');
+                                frontMatter[key] = val;
+                            }
+                        });
+                        var body = parts.slice(2).join('---').trim();
+                    } else {
+                        var body = text;
+                    }
+
+                    var title = frontMatter.title || slug;
+                    var desc = frontMatter.excerpt || '';
+                    var articleUrl = 'https://shouldigetai.com/insights/article.html?slug=' + slug;
+                    var imageUrl = frontMatter.featured_image
+                        ? (frontMatter.featured_image.startsWith('http') ? frontMatter.featured_image : 'https://shouldigetai.com' + frontMatter.featured_image)
+                        : 'https://shouldigetai.com/logo.svg';
+
+                    // Populate hero
+                    document.getElementById('title').textContent = title;
+                    document.title = title + ' — Clear-Path AI Consulting';
+                    document.getElementById('category').textContent = frontMatter.category || '';
+
+                    if (frontMatter.date) {
+                        var d = new Date(frontMatter.date);
+                        document.getElementById('date').textContent = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+                    }
+
+                    if (frontMatter.featured_image) {
+                        document.getElementById('featured-img').src = frontMatter.featured_image;
+                        document.getElementById('featured-img').alt = title;
+                        document.getElementById('featured-img-wrap').style.display = 'block';
+                    }
+
+                    // Meta tags
+                    setMeta('description', desc);
+                    setCanonical(articleUrl);
+                    setOG('og:type', 'article');
+                    setOG('og:title', title);
+                    setOG('og:description', desc);
+                    setOG('og:image', imageUrl);
+                    setOG('og:url', articleUrl);
+                    setMeta('twitter:card', 'summary_large_image');
+                    setMeta('twitter:title', title);
+                    setMeta('twitter:description', desc);
+                    setMeta('twitter:image', imageUrl);
+
+                    // Article schema
+                    var schema = {
+                        '@context': 'https://schema.org',
+                        '@type': 'Article',
+                        'headline': title,
+                        'description': desc,
+                        'author': { '@type': 'Person', 'name': 'Jeff Rorabaugh' },
+                        'publisher': {
+                            '@type': 'ProfessionalService',
+                            'name': 'Clear-Path AI Consulting',
+                            'url': 'https://shouldigetai.com',
+                            'logo': { '@type': 'ImageObject', 'url': 'https://shouldigetai.com/logo.svg' }
+                        },
+                        'url': articleUrl,
+                        'image': imageUrl
+                    };
+                    if (frontMatter.date) schema.datePublished = frontMatter.date;
+
+                    var schemaEl = document.createElement('script');
+                    schemaEl.type = 'application/ld+json';
+                    schemaEl.textContent = JSON.stringify(schema);
+                    document.head.appendChild(schemaEl);
+
+                    // Render markdown
+                    document.getElementById('content').innerHTML = marked.parse(body);
+                })
+                .catch(function() {
+                    document.getElementById('content').innerHTML = '<p>Article not found.</p>';
+                });
+        }
+
+        // Mobile menu toggle
+        var menuBtn = document.getElementById('mobile-menu-btn');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var menuOpen = false;
+        menuBtn.addEventListener('click', function() {
+            menuOpen = !menuOpen;
+            if (menuOpen) {
+                mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+                mobileMenu.style.opacity = '1';
+            } else {
+                mobileMenu.style.maxHeight = '0';
+                mobileMenu.style.opacity = '0';
+            }
+            menuBtn.querySelector('.menu-open-icon').classList.toggle('hidden', menuOpen);
+            menuBtn.querySelector('.menu-close-icon').classList.toggle('hidden', !menuOpen);
+            menuBtn.setAttribute('aria-expanded', menuOpen);
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 py-12" style="background: #FAFBFD;">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row md:items-start md:justify-between gap-8">
+            <div>
+                <img src="../logo.svg" alt="Clear-Path AI Consulting" class="h-8 w-auto mb-3">
+                <p class="text-sm text-brand-teal font-medium tracking-wide uppercase">Process First. AI Second.</p>
+            </div>
+            <div class="md:text-right">
+                <p class="text-xs text-slate-500">
+                    &copy; <script>document.write(new Date().getFullYear())</script> Clear-Path AI Consulting &mdash; A service of Happy Camper Consulting, LLC
+                </p>
+                <p class="text-xs text-slate-400 mt-1">
+                    Website by <a href="https://townsite.co" target="_blank" rel="noopener" class="text-slate-500 hover:text-brand-teal transition-colors">Townsite</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

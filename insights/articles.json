@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "ai-tools-that-actually-work-for-small-teams",
+    "title": "AI Tools That Actually Work for Small Teams",
+    "date": "2026-02-28",
+    "category": "Implementation",
+    "excerpt": "Not every AI tool is built for enterprise. Here are the categories where small businesses are seeing real, measurable results.",
+    "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80"
+  },
+  {
+    "slug": "how-a-plumbing-company-saved-12-hours-a-week",
+    "title": "How a Plumbing Company Saved 12 Hours a Week",
+    "date": "2026-02-20",
+    "category": "Industry Insights",
+    "excerpt": "A 15-person plumbing company was drowning in admin work. The fix wasn't a fancy AI tool — it was process clarity first, then targeted automation.",
+    "image": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80"
+  },
+  {
+    "slug": "sops-the-unsexy-foundation-of-smart-automation",
+    "title": "SOPs: The Unsexy Foundation of Smart Automation",
+    "date": "2026-02-12",
+    "category": "Operations",
+    "excerpt": "Standard Operating Procedures aren't glamorous. But without them, every automation you build is a house of cards.",
+    "image": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&q=80"
+  },
+  {
+    "slug": "the-roi-question-every-business-owner-should-ask",
+    "title": "The ROI Question Every Business Owner Should Ask",
+    "date": "2026-03-07",
+    "category": "Strategy",
+    "excerpt": "Will AI save me money?\" is the wrong first question. Here's what to ask instead — and how to get an honest answer.",
+    "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80"
+  },
+  {
+    "slug": "what-a-process-map-actually-looks-like",
+    "title": "What a Process Map Actually Looks Like",
+    "date": "2026-03-14",
+    "category": "Operations",
+    "excerpt": "Process maps don't have to be complicated. Here's what a useful one looks like — and why most businesses have never made one.",
+    "image": "https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?w=800&q=80"
+  },
+  {
+    "slug": "why-most-small-businesses-dont-need-ai-yet",
+    "title": "Why Most Small Businesses Don't Need AI Yet",
+    "date": "2026-03-20",
+    "category": "Strategy",
+    "excerpt": "Before you invest in AI, you need to know what your processes actually look like. Most businesses skip this step — and waste thousands.",
+    "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80"
+  }
+]
