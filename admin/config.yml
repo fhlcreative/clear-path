@@ -2,7 +2,7 @@ backend:
   name: github
   repo: fhlcreative/clear-path
   branch: main
-  base_url: https://shouldigetai.com
+  base_url: https://www.shouldigetai.com
   auth_endpoint: api/auth
 
 media_folder: "images/articles"
