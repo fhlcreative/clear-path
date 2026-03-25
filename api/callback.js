@@ -1,4 +1,4 @@
-module.exports = async function handler(req, res) {
+export default async function handler(req, res) {
   const code = req.query.code;
   if (!code) {
     return res.status(400).send('Missing code parameter');
@@ -36,4 +36,4 @@ module.exports = async function handler(req, res) {
 </script></body></html>`;
 
   res.status(200).setHeader('Content-Type', 'text/html').send(body);
-};
+}
