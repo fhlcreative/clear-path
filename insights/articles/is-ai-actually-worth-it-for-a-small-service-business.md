@@ -1,6 +1,6 @@
 ---
 title: Is AI Actually Worth It for a Small Service Business?
-date: 2026-04-01
+date: 2026-03-25
 category: Strategy
 featured_image: /images/articles/pasted-image-1774467440119.png
 excerpt: Every vendor says you need AI. But nobody is helping you answer the only question that matters — is it actually worth it for YOUR business? Here's the framework.
