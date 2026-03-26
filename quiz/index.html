@@ -428,6 +428,7 @@
     .score-number { font-size: 34px; }
   }
 </style>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -516,6 +517,8 @@
 </div>
 
 <script>
+// Initialize EmailJS
+(function() { emailjs.init("k2OPU0_-FMfkM95ii"); })();
 // =====================================================================
 // QUIZ DATA
 // =====================================================================
@@ -856,10 +859,27 @@ function submitLead() {
   const category = eligibilityScore >= 18 ? 'HIGH' : eligibilityScore >= 13 ? 'MODERATE' : 'LOW';
   const wvw = agentScore >= 8 ? 'Worker (Agent)' : agentScore >= 5 ? 'Both' : 'Wrenches (Tools)';
 
-  // Submit to API endpoint
-  
-  const leadData = { name, email, business, eligibilityScore, category, agentScore, wvw, answers: answers.map((a, i) => ({ question: i + 1, answer: a + 1, score: questions[i].options[a].score })) };
-  fetch('/api/quiz-lead', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(leadData) }).catch(err => console.error('Lead submit error:', err));
+  // Send via EmailJS
+  const templateParams = {
+    from_name: name,
+    from_email: email,
+    business_name: business || 'Not provided',
+    message: 'AI Eligibility Quiz Results\n\n' +
+      'Name: ' + name + '\n' +
+      'Email: ' + email + '\n' +
+      'Business: ' + (business || 'Not provided') + '\n\n' +
+      'AI Eligibility Score: ' + eligibilityScore + '/25 (' + category + ')\n' +
+      'Worker vs. Wrench: ' + wvw + '\n' +
+      'Agent Score: ' + agentScore + '/12\n\n' +
+      'Answer Breakdown:\n' +
+      answers.map((a, i) => 'Q' + (i+1) + ': Option ' + (a+1) + ' (Score: ' + questions[i].options[a].score + ')').join('\n'),
+    client_email: 'hapi@shouldigetai.com'
+  };
+
+  emailjs.send('service_xitxjzq', 'template_4nfqigs', templateParams)
+    .then(function() { console.log("Quiz lead sent via EmailJS"); })
+    .catch(function(err) { console.error("EmailJS error:", err); });
+
 
   // Show confirmation
   const captureEl = document.querySelector('.lead-capture');
