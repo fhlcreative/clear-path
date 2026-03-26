@@ -347,6 +347,7 @@
                     <p class="reveal delay-100 text-slate-600 text-lg leading-relaxed">
                         Every vendor, every LinkedIn post, every conference is telling you the same thing: <em>"You need AI."</em> But nobody is helping you answer the three questions that actually matter.
                     </p>
+                    <a href="/quiz" class="reveal delay-100 group inline-block mt-4 text-brand-teal hover:text-teal-700 font-medium transition-colors">Take the 2-Minute Quiz <span class="inline-block transition-transform group-hover:translate-x-1">→</span></a>
                 </div>
 
                 <!-- Right: the three questions, typographic -->
@@ -798,17 +799,30 @@
     </section>
 
     <!-- Quiz CTA Section -->
-    <section id="quiz-section" class="py-20 md:py-28 bg-white border-t border-slate-200">
-        <div class="max-w-3xl mx-auto px-6 text-center">
-            <h2 class="reveal font-medium text-slate-900 mb-6">Not Sure Where You Stand?</h2>
-            <p class="reveal delay-100 text-slate-600 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
+    <section id="quiz-section" class="py-24 md:py-32 relative overflow-hidden" style="background: linear-gradient(180deg, #EBF5F9 0%, #F7F9FB 100%);">
+        <!-- Decorative radial glow -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-30" style="background: radial-gradient(circle, rgba(55,149,183,0.15) 0%, transparent 70%);" aria-hidden="true"></div>
+
+        <div class="relative z-10 max-w-2xl mx-auto px-6 text-center">
+            <!-- Overline -->
+            <p class="reveal text-brand-teal font-semibold text-sm uppercase tracking-widest mb-4">Free Assessment</p>
+
+            <h2 class="reveal delay-100 font-medium text-slate-900 mb-5" style="font-size: clamp(1.75rem, 3vw + 0.5rem, 2.5rem); letter-spacing: -0.015em;">Not Sure Where You Stand?</h2>
+
+            <p class="reveal delay-200 text-slate-600 text-lg leading-relaxed mb-10 max-w-xl mx-auto">
                 Take our 2-minute AI Eligibility Quiz to get an instant read on whether AI could work for your business.
             </p>
-            <div class="reveal delay-200">
-                <a href="/quiz" class="inline-flex items-center justify-center gap-2 bg-brand-teal hover:bg-brand-teal-hover text-white font-medium h-14 rounded-full px-8 text-lg shadow-sm cta-btn group">
+
+            <!-- CTA cluster -->
+            <div class="reveal delay-300 flex flex-col items-center gap-4">
+                <a href="/quiz" class="inline-flex items-center justify-center gap-2 text-white font-medium h-14 rounded-full px-10 text-lg shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 cta-btn group" style="background: #F59E0B;" onmouseover="this.style.background='#F5A520'" onmouseout="this.style.background='#F59E0B'">
                     Take the 2-Minute Quiz
                     <iconify-icon icon="solar:arrow-right-linear" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
                 </a>
+                <span class="flex items-center gap-1.5 text-slate-400 text-sm">
+                    <iconify-icon icon="solar:clock-circle-linear" class="text-base"></iconify-icon>
+                    5 questions · No email required
+                </span>
             </div>
         </div>
     </section>
