@@ -864,19 +864,15 @@ function submitLead() {
     from_name: name,
     from_email: email,
     business_name: business || 'Not provided',
-    message: 'AI Eligibility Quiz Results\n\n' +
-      'Name: ' + name + '\n' +
-      'Email: ' + email + '\n' +
-      'Business: ' + (business || 'Not provided') + '\n\n' +
-      'AI Eligibility Score: ' + eligibilityScore + '/25 (' + category + ')\n' +
+    score_summary: category + ' ' + eligibilityScore + '/25 — ' + wvw,
+    message: 'AI Eligibility Score: ' + eligibilityScore + '/25 (' + category + ')\n' +
       'Worker vs. Wrench: ' + wvw + '\n' +
       'Agent Score: ' + agentScore + '/12\n\n' +
       'Answer Breakdown:\n' +
-      answers.map((a, i) => 'Q' + (i+1) + ': Option ' + (a+1) + ' (Score: ' + questions[i].options[a].score + ')').join('\n'),
-    client_email: 'hapi@shouldigetai.com'
+      answers.map((a, i) => 'Q' + (i+1) + ': Option ' + (a+1) + ' (Score: ' + questions[i].options[a].score + ')').join('\n')
   };
 
-  emailjs.send('service_xitxjzq', 'template_4nfqigs', templateParams)
+  emailjs.send('service_xitxjzq', 'template_dblb8ih', templateParams)
     .then(function() { console.log("Quiz lead sent via EmailJS"); })
     .catch(function(err) { console.error("EmailJS error:", err); });
 
