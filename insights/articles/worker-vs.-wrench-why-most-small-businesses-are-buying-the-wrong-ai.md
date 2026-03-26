@@ -2,7 +2,7 @@
 title: 'Worker vs. Wrench: Why Most Small Businesses Are Buying the Wrong AI'
 date: 2026-03-26
 category: Strategy
-featured_image: ''
+featured_image: /images/articles/pasted-image-1774527098285.png
 excerpt: You've been told you need AI. But nobody asked the question that actually matters — do you need a worker or a wrench? That distinction changes everything.
 ---
 
