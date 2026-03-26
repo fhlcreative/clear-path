@@ -1,6 +1,6 @@
 ---
 title: Is AI Actually Worth It for a Small Service Business?
-date: 2026-03-25
+date: 2026-04-01
 category: Strategy
 featured_image: /images/articles/pasted-image-1774467440119.png
 excerpt: Every vendor says you need AI. But nobody is helping you answer the only question that matters — is it actually worth it for YOUR business? Here's the framework.
@@ -50,9 +50,7 @@ Here's what rigorous AI consulting for small businesses looks like in practice �
 
 **Step 5 — Clear Recommendation.** Every assessment ends with one of four outputs: **Go** (strong AI fit, positive ROI, proceed to implementation), **Go with Caveats** (AI fits but with specific conditions or prerequisites), **Not Yet** (process work needed first; reassess in 3–6 months), or **No** (AI is not the right tool for this problem).
 
-
 That last option — "No" — is one most AI vendors will never give you. We will. Because an honest "no" builds more trust than an enthusiastic yes that leads to a failed implementation.
-
 
 The Real Payoff — Either Way
 
