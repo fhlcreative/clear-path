@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Should I Get AI? | Clear-Path AI Consulting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { 
+    font-family: 'Outfit', sans-serif; 
+    background: #F7F9FB; 
+    color: #1B2E4F;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .quiz-container {
+    max-width: 680px;
+    width: 100%;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(27,46,79,0.08);
+    overflow: hidden;
+  }
+
+  /* HEADER */
+  .quiz-header {
+    background: #1B2E4F;
+    color: #fff;
+    padding: 32px 40px;
+    text-align: center;
+    position: relative;
+  }
+  .quiz-header h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+  .quiz-header p {
+    font-size: 15px;
+    opacity: 0.85;
+    line-height: 1.5;
+  }
+  .header-logo {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    height: 32px;
+    opacity: 0.9;
+  }
+
+  /* FOOTER */
+  .quiz-footer {
+    text-align: center;
+    padding: 16px 20px;
+    font-size: 12px;
+    color: #999;
+    border-top: 1px solid #F0F0F0;
+    line-height: 1.5;
+  }
+  .quiz-footer a {
+    color: #3795B7;
+    text-decoration: none;
+  }
+  .quiz-footer a:hover { text-decoration: underline; }
+
+  /* PROGRESS BAR */
+  .progress-bar {
+    height: 4px;
+    background: #E2E8F0;
+    position: relative;
+  }
+  .progress-fill {
+    height: 100%;
+    background: #3795B7;
+    transition: width 0.4s ease;
+    border-radius: 0 2px 2px 0;
+  }
+
+  /* QUIZ BODY */
+  .quiz-body {
+    padding: 40px;
+  }
+
+  /* INTRO SCREEN */
+  .screen { display: none; }
+  .screen.active { display: block; }
+
+  .intro-text {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .intro-text h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 24px;
+    color: #1B2E4F;
+    margin-bottom: 12px;
+  }
+  .intro-text p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+  }
+  .intro-bullets {
+    list-style: none;
+    margin: 20px 0;
+    text-align: left;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .intro-bullets li {
+    padding: 8px 0;
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .intro-bullets li::before {
+    content: '✓';
+    color: #3795B7;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  /* QUESTION */
+  .question-number {
+    font-size: 12px;
+    font-weight: 600;
+    color: #3795B7;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+  }
+  .question-text {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #1B2E4F;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+  .question-subtext {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+
+  /* ANSWER OPTIONS */
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .option {
+    border: 2px solid #E2E8F0;
+    border-radius: 10px;
+    padding: 16px 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .option:hover {
+    border-color: #3795B7;
+    background: #F0F9FC;
+  }
+  .option.selected {
+    border-color: #3795B7;
+    background: #EBF5FB;
+  }
+  .option-radio {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #CBD5E0;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+  .option.selected .option-radio {
+    border-color: #3795B7;
+    background: #3795B7;
+  }
+  .option.selected .option-radio::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+  }
+  .option-text {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.4;
+  }
+  .option.selected .option-text {
+    color: #1B2E4F;
+    font-weight: 500;
+  }
+
+  /* NAVIGATION */
+  .nav-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+  }
+  .btn {
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+  }
+  .btn-primary {
+    background: #3795B7;
+    color: #fff;
+    border-color: #3795B7;
+  }
+  .btn-primary:hover { background: #2D7A99; border-color: #2D7A99; }
+  .btn-primary:disabled { background: #B0D4E3; border-color: #B0D4E3; cursor: not-allowed; }
+  .btn-outline {
+    background: transparent;
+    color: #1B2E4F;
+    border-color: #E2E8F0;
+  }
+  .btn-outline:hover { border-color: #1B2E4F; }
+  .btn-large {
+    padding: 16px 40px;
+    font-size: 17px;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .btn-cta {
+    background: #1B2E4F;
+    color: #fff;
+    border-color: #1B2E4F;
+  }
+  .btn-cta:hover { background: #0F1D35; }
+
+  /* RESULTS */
+  .result-score {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .score-circle {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    border: 6px solid;
+  }
+  .score-circle.high { border-color: #3795B7; background: #EBF5FB; }
+  .score-circle.moderate { border-color: #F59E0B; background: #FEF3C7; }
+  .score-circle.low { border-color: #9CA3AF; background: #F3F4F6; }
+  .score-number {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .score-circle.high .score-number { color: #3795B7; }
+  .score-circle.moderate .score-number { color: #D97706; }
+  .score-circle.low .score-number { color: #6B7280; }
+  .score-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 4px;
+  }
+  .result-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1B2E4F;
+    margin-bottom: 8px;
+  }
+  .result-subtitle {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 24px;
+    line-height: 1.6;
+  }
+
+  /* RESULT BREAKDOWN */
+  .breakdown {
+    background: #F7F9FB;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+  .breakdown h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1B2E4F;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .breakdown-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #E2E8F0;
+  }
+  .breakdown-item:last-child { border-bottom: none; }
+  .breakdown-label { font-size: 14px; color: #555; }
+  .breakdown-bar-wrap {
+    width: 120px;
+    height: 8px;
+    background: #E2E8F0;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .breakdown-bar {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.6s ease;
+  }
+  .breakdown-bar.high { background: #3795B7; }
+  .breakdown-bar.mid { background: #F59E0B; }
+  .breakdown-bar.low { background: #9CA3AF; }
+
+  /* WORKER VS WRENCH INDICATOR */
+  .wvw-result {
+    background: #1B2E4F;
+    border-radius: 10px;
+    padding: 24px;
+    color: #fff;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .wvw-result h3 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    opacity: 0.7;
+    margin-bottom: 8px;
+  }
+  .wvw-result .wvw-answer {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .wvw-result .wvw-detail {
+    font-size: 14px;
+    opacity: 0.85;
+    line-height: 1.5;
+  }
+
+  /* LEAD CAPTURE */
+  .lead-capture {
+    background: #F7F9FB;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .lead-capture h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 18px;
+    color: #1B2E4F;
+    margin-bottom: 8px;
+  }
+  .lead-capture p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 16px;
+  }
+  .lead-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  .lead-form input {
+    padding: 12px 16px;
+    border: 2px solid #E2E8F0;
+    border-radius: 8px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .lead-form input:focus { border-color: #3795B7; }
+
+  /* DISCLAIMER */
+  .disclaimer {
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    margin-top: 16px;
+    line-height: 1.5;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .quiz-body { padding: 24px 20px; }
+    .quiz-header { padding: 24px 20px; }
+    .quiz-header h1 { font-size: 22px; }
+    .question-text { font-size: 18px; }
+    .score-circle { width: 110px; height: 110px; }
+    .score-number { font-size: 34px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="quiz-container">
+  <div class="quiz-header">
+    <h1>Should I Get AI?</h1>
+    <p>A 2-minute self-assessment to find out if AI could work for your business — and what kind.</p>
+    <img class="header-logo" src="../logo-dark.svg" alt="Clear-Path AI" id="header-logo-img">
+  </div>
+
+  <div class="progress-bar">
+    <div class="progress-fill" id="progress" style="width: 0%"></div>
+  </div>
+
+  <div class="quiz-body">
+
+    <!-- INTRO SCREEN -->
+    <div class="screen active" id="screen-intro">
+      <div class="intro-text">
+        <h2>Let's Find Out Together</h2>
+        <p>Answer 10 quick questions about how your business operates. No jargon, no tricks — just honest questions about your day-to-day.</p>
+      </div>
+      <ul class="intro-bullets">
+        <li>Takes about 2 minutes</li>
+        <li>Get your AI Eligibility Score instantly</li>
+        <li>Find out if you need a "worker" or a "wrench"</li>
+        <li>No email required to see your results</li>
+      </ul>
+      <button class="btn btn-primary btn-large" onclick="startQuiz()">Let's Go →</button>
+    </div>
+
+    <!-- QUESTION SCREENS (generated by JS) -->
+    <div class="screen" id="screen-question">
+      <div class="question-number" id="q-number"></div>
+      <div class="question-text" id="q-text"></div>
+      <div class="question-subtext" id="q-subtext"></div>
+      <div class="options" id="q-options"></div>
+      <div class="nav-row">
+        <button class="btn btn-outline" id="btn-back" onclick="prevQuestion()">← Back</button>
+        <button class="btn btn-primary" id="btn-next" onclick="nextQuestion()" disabled>Next →</button>
+      </div>
+    </div>
+
+    <!-- RESULTS SCREEN -->
+    <div class="screen" id="screen-results">
+      <div class="result-score">
+        <div class="score-circle" id="score-circle">
+          <div class="score-number" id="score-number"></div>
+          <div class="score-label" id="score-label"></div>
+        </div>
+        <div class="result-title" id="result-title"></div>
+        <div class="result-subtitle" id="result-subtitle"></div>
+      </div>
+
+      <div class="breakdown" id="breakdown"></div>
+
+      <div class="wvw-result" id="wvw-result"></div>
+
+      <div class="lead-capture">
+        <h3>Want the Full Breakdown?</h3>
+        <p>Get a detailed report of your scores plus a personalized recommendation — free.</p>
+        <div class="lead-form">
+          <input type="text" id="lead-name" placeholder="Your name">
+          <input type="email" id="lead-email" placeholder="Your email">
+          <input type="text" id="lead-business" placeholder="Business name (optional)">
+          <button class="btn btn-primary btn-large" onclick="submitLead()">Send My Report</button>
+        </div>
+      </div>
+
+      <a href="https://calendly.com/jeff-happycamperconsulting/clear-path-discovery" target="_blank" style="text-decoration: none;">
+        <button class="btn btn-cta btn-large">Book a Free Discovery Conversation →</button>
+      </a>
+
+      <div class="disclaimer">
+        This self-assessment provides a general indication based on your answers.<br>
+        A full Clear-Path assessment uses our proprietary 5-criteria scoring matrix with your actual process data.<br>
+        © Clear-Path AI Consulting | shouldigetai.com
+      </div>
+    </div>
+
+  </div>
+
+  <div class="quiz-footer">
+    <a href="https://www.shouldigetai.com" target="_blank">Clear-Path AI Consulting</a> · shouldigetai.com · <em>Process First. AI Second.</em>
+  </div>
+</div>
+
+<script>
+// =====================================================================
+// QUIZ DATA
+// =====================================================================
+const questions = [
+  {
+    // CRITERION 1: Repetitiveness
+    number: 1,
+    text: "How much of your week feels like you're doing the same tasks over and over?",
+    subtext: "Think about emails, data entry, scheduling, invoicing, follow-ups — the stuff that repeats.",
+    criterion: 'repetitiveness',
+    options: [
+      { text: "Almost nothing repeats — every day is different", score: 1 },
+      { text: "Some tasks repeat, but most require fresh thinking", score: 2 },
+      { text: "A fair amount of my week is repetitive", score: 3 },
+      { text: "Most of my admin work follows the same pattern", score: 4 },
+      { text: "I could do half my tasks in my sleep — they're that repetitive", score: 5 }
+    ]
+  },
+  {
+    // CRITERION 2: Rule-Based
+    number: 2,
+    text: "Could you write step-by-step instructions for your most tedious tasks?",
+    subtext: "If you had to hand your most repetitive tasks to a new hire, could you write clear steps?",
+    criterion: 'rule_based',
+    options: [
+      { text: "No — most of my work requires judgment and intuition", score: 1 },
+      { text: "Some tasks, maybe, but most need my personal touch", score: 2 },
+      { text: "About half could be documented step-by-step", score: 3 },
+      { text: "Most of my repetitive tasks follow clear rules", score: 4 },
+      { text: "Absolutely — same inputs, same steps, same outputs every time", score: 5 }
+    ]
+  },
+  {
+    // CRITERION 3: Data Availability
+    number: 3,
+    text: "Where does your important business information live?",
+    subtext: "Client details, project info, financials, communications — where is it?",
+    criterion: 'data_availability',
+    options: [
+      { text: "Mostly in my head, notebooks, or scattered paper files", score: 1 },
+      { text: "Mix of paper and digital — some in apps, some in notebooks", score: 2 },
+      { text: "Mostly digital but spread across many different apps and files", score: 3 },
+      { text: "Digital and fairly organized — CRM, spreadsheets, cloud storage", score: 4 },
+      { text: "Fully digital, well-organized, and I can find anything quickly", score: 5 }
+    ]
+  },
+  {
+    // CRITERION 4: Error Tolerance
+    number: 4,
+    text: "If a task got done 95% right instead of 100%, how bad would it be?",
+    subtext: "Think about your repetitive tasks specifically — not your most critical decisions.",
+    criterion: 'error_tolerance',
+    options: [
+      { text: "Catastrophic — legal, financial, or safety consequences", score: 1 },
+      { text: "Serious — it would cost money or damage a relationship", score: 2 },
+      { text: "Noticeable — but fixable with reasonable effort", score: 3 },
+      { text: "Minor — someone would catch it before it mattered", score: 4 },
+      { text: "Negligible — I review the output anyway, so errors get caught", score: 5 }
+    ]
+  },
+  {
+    // CRITERION 5: Time Cost
+    number: 5,
+    text: "How many hours per week do you spend on admin tasks that don't directly grow revenue?",
+    subtext: "Data entry, scheduling, email follow-ups, report generation, filing, invoicing...",
+    criterion: 'time_cost',
+    options: [
+      { text: "Less than 2 hours", score: 1 },
+      { text: "2-5 hours", score: 2 },
+      { text: "5-10 hours", score: 3 },
+      { text: "10-20 hours", score: 4 },
+      { text: "More than 20 hours — it's eating my week", score: 5 }
+    ]
+  },
+  {
+    // WORKER VS WRENCH: Interconnectedness
+    number: 6,
+    text: "When you finish one task, does the result usually feed into another task?",
+    subtext: "For example: client inquiry → schedule call → send prep materials → update CRM → follow up.",
+    criterion: 'wvw_interconnected',
+    options: [
+      { text: "Rarely — most of my tasks are independent", score: 1, agent: 0 },
+      { text: "Sometimes — a few tasks connect", score: 2, agent: 1 },
+      { text: "Often — there's a chain of steps for most client interactions", score: 3, agent: 2 },
+      { text: "Almost always — everything is connected to everything", score: 4, agent: 3 }
+    ]
+  },
+  {
+    // WORKER VS WRENCH: Context Needs
+    number: 7,
+    text: "How often do you need to pull information from multiple places to complete a single task?",
+    subtext: "Check email + look at calendar + open CRM + find a file — all for one thing.",
+    criterion: 'wvw_context',
+    options: [
+      { text: "Rarely — each task uses one system", score: 1, agent: 0 },
+      { text: "Sometimes — maybe 2 systems", score: 2, agent: 1 },
+      { text: "Often — I'm tabbing between 3-4 systems constantly", score: 3, agent: 2 },
+      { text: "All the time — I'm the glue that connects everything", score: 4, agent: 3 }
+    ]
+  },
+  {
+    // WORKER VS WRENCH: Communication Load
+    number: 8,
+    text: "How much of your admin time goes to communication tasks?",
+    subtext: "Drafting emails, sending follow-ups, status updates, client check-ins, scheduling messages.",
+    criterion: 'wvw_communication',
+    options: [
+      { text: "Very little — my work is mostly internal/solo", score: 1, agent: 0 },
+      { text: "Some — a few emails and follow-ups per day", score: 2, agent: 1 },
+      { text: "A lot — communication IS a big chunk of my admin time", score: 3, agent: 2 },
+      { text: "Most of it — I spend more time writing messages than doing tasks", score: 4, agent: 3 }
+    ]
+  },
+  {
+    // WORKER VS WRENCH: Tool Sprawl
+    number: 9,
+    text: "How many different apps, tools, or platforms do you use to run your business?",
+    subtext: "Count everything: email, calendar, CRM, invoicing, project management, spreadsheets, etc.",
+    criterion: 'wvw_tools',
+    options: [
+      { text: "1-3 tools — I keep it simple", score: 1, agent: 0 },
+      { text: "4-6 tools — a manageable stack", score: 2, agent: 1 },
+      { text: "7-10 tools — it's getting complicated", score: 3, agent: 2 },
+      { text: "10+ tools — and I've forgotten passwords to some of them", score: 4, agent: 3 }
+    ]
+  },
+  {
+    // OVERALL READINESS
+    number: 10,
+    text: "If AI could handle some of your workload, what would you do with the extra time?",
+    subtext: "Be honest — there's no wrong answer here.",
+    criterion: 'readiness',
+    options: [
+      { text: "I'm not sure AI could really help my specific business", score: 1 },
+      { text: "I'd be curious to explore, but I'd need to see proof first", score: 2 },
+      { text: "I'd reinvest the time into growing the business", score: 3 },
+      { text: "I already know exactly what I'd focus on — I just can't get to it", score: 4 }
+    ]
+  }
+];
+
+// =====================================================================
+// STATE
+// =====================================================================
+let currentQuestion = 0;
+let answers = new Array(questions.length).fill(null);
+
+// =====================================================================
+// FUNCTIONS
+// =====================================================================
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function updateProgress() {
+  const pct = ((currentQuestion + 1) / questions.length) * 100;
+  document.getElementById('progress').style.width = pct + '%';
+}
+
+function startQuiz() {
+  currentQuestion = 0;
+  showScreen('screen-question');
+  renderQuestion();
+  updateProgress();
+}
+
+function renderQuestion() {
+  const q = questions[currentQuestion];
+  document.getElementById('q-number').textContent = 'Question ' + q.number + ' of ' + questions.length;
+  document.getElementById('q-text').textContent = q.text;
+  document.getElementById('q-subtext').textContent = q.subtext;
+
+  const optionsEl = document.getElementById('q-options');
+  optionsEl.innerHTML = '';
+
+  q.options.forEach((opt, i) => {
+    const div = document.createElement('div');
+    div.className = 'option' + (answers[currentQuestion] === i ? ' selected' : '');
+    div.innerHTML = '<div class="option-radio"></div><div class="option-text">' + opt.text + '</div>';
+    div.addEventListener('click', () => selectOption(i));
+    optionsEl.appendChild(div);
+  });
+
+  document.getElementById('btn-back').style.visibility = currentQuestion === 0 ? 'hidden' : 'visible';
+  document.getElementById('btn-next').disabled = answers[currentQuestion] === null;
+  document.getElementById('btn-next').textContent = currentQuestion === questions.length - 1 ? 'See My Results →' : 'Next →';
+
+  updateProgress();
+}
+
+function selectOption(index) {
+  answers[currentQuestion] = index;
+  document.querySelectorAll('.option').forEach((o, i) => {
+    o.classList.toggle('selected', i === index);
+  });
+  document.getElementById('btn-next').disabled = false;
+}
+
+function nextQuestion() {
+  if (answers[currentQuestion] === null) return;
+  if (currentQuestion < questions.length - 1) {
+    currentQuestion++;
+    renderQuestion();
+  } else {
+    showResults();
+  }
+}
+
+function prevQuestion() {
+  if (currentQuestion > 0) {
+    currentQuestion--;
+    renderQuestion();
+  }
+}
+
+function showResults() {
+  document.getElementById('progress').style.width = '100%';
+
+  // Calculate scores
+  let eligibilityScore = 0;  // Questions 1-5 (max 25)
+  let agentScore = 0;        // Questions 6-9 (max 12)
+  let readinessScore = 0;    // Question 10 (max 4)
+
+  // Criteria scores for breakdown
+  const criteria = {
+    'Repetitive Tasks': 0,
+    'Documentable Processes': 0,
+    'Digital Readiness': 0,
+    'Error Tolerance': 0,
+    'Time Investment': 0
+  };
+
+  const criteriaKeys = ['repetitiveness', 'rule_based', 'data_availability', 'error_tolerance', 'time_cost'];
+  const criteriaNames = Object.keys(criteria);
+
+  questions.forEach((q, i) => {
+    const opt = q.options[answers[i]];
+    const idx = criteriaKeys.indexOf(q.criterion);
+    if (idx !== -1) {
+      eligibilityScore += opt.score;
+      criteria[criteriaNames[idx]] = opt.score;
+    }
+    if (q.criterion.startsWith('wvw_') && opt.agent !== undefined) {
+      agentScore += opt.agent;
+    }
+    if (q.criterion === 'readiness') {
+      readinessScore = opt.score;
+    }
+  });
+
+  // Determine category
+  let category, categoryClass, title, subtitle;
+  if (eligibilityScore >= 18) {
+    category = 'HIGH';
+    categoryClass = 'high';
+    title = 'Strong AI Candidate';
+    subtitle = 'Your business has significant potential for AI automation. Multiple processes show high eligibility — you\'re spending real time on tasks that technology could handle.';
+  } else if (eligibilityScore >= 13) {
+    category = 'MODERATE';
+    categoryClass = 'moderate';
+    title = 'Worth Exploring';
+    subtitle = 'Your business has some promising areas for AI, but not everything qualifies. A focused assessment would identify exactly where the real opportunities are.';
+  } else {
+    category = 'LOW';
+    categoryClass = 'low';
+    title = 'Not a Priority Right Now';
+    subtitle = 'Based on your answers, AI automation may not be the best investment for your business today. But you may still benefit from process documentation and mapping.';
+  }
+
+  // Worker vs Wrench determination
+  let wvwTitle, wvwDetail;
+  if (agentScore >= 8) {
+    wvwTitle = 'You likely need a Worker (AI Agent)';
+    wvwDetail = 'Your processes are interconnected, communication-heavy, and context-dependent. A dedicated AI agent — a digital team member — would serve you better than a collection of individual tools.';
+  } else if (agentScore >= 5) {
+    wvwTitle = 'You likely need Both — Worker + Wrenches';
+    wvwDetail = 'You have a mix of interconnected processes and standalone tasks. Some would benefit from a dedicated AI agent, while others are well-served by individual tools. The key is knowing which is which.';
+  } else {
+    wvwTitle = 'You likely need Wrenches (AI Tools)';
+    wvwDetail = 'Your processes are mostly standalone and independent. Individual AI tools — scheduling, email management, etc. — would likely be more cost-effective than a dedicated agent.';
+  }
+
+  // Render results
+  showScreen('screen-results');
+
+  const circle = document.getElementById('score-circle');
+  circle.className = 'score-circle ' + categoryClass;
+  document.getElementById('score-number').textContent = eligibilityScore;
+  document.getElementById('score-label').textContent = 'of 25';
+  document.getElementById('result-title').textContent = title;
+  document.getElementById('result-subtitle').textContent = subtitle;
+
+  // Breakdown
+  const breakdownEl = document.getElementById('breakdown');
+  let breakdownHTML = '<h3>Your Score Breakdown</h3>';
+  for (const [name, score] of Object.entries(criteria)) {
+    const pct = (score / 5) * 100;
+    const barClass = score >= 4 ? 'high' : score >= 3 ? 'mid' : 'low';
+    breakdownHTML += '<div class="breakdown-item">' +
+      '<span class="breakdown-label">' + name + '</span>' +
+      '<div class="breakdown-bar-wrap"><div class="breakdown-bar ' + barClass + '" style="width:' + pct + '%"></div></div>' +
+      '</div>';
+  }
+  breakdownEl.innerHTML = breakdownHTML;
+
+  // Worker vs Wrench
+  const wvwEl = document.getElementById('wvw-result');
+  wvwEl.innerHTML = '<h3>Worker or Wrench?</h3>' +
+    '<div class="wvw-answer">' + wvwTitle + '</div>' +
+    '<div class="wvw-detail">' + wvwDetail + '</div>';
+
+  // Scroll to top of results
+  document.querySelector('.quiz-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function submitLead() {
+  const name = document.getElementById('lead-name').value.trim();
+  const email = document.getElementById('lead-email').value.trim();
+  const business = document.getElementById('lead-business').value.trim();
+
+  if (!name || !email) {
+    alert('Please enter your name and email.');
+    return;
+  }
+
+  // Build scores summary for the lead data
+  let eligibilityScore = 0;
+  const criteriaKeys = ['repetitiveness', 'rule_based', 'data_availability', 'error_tolerance', 'time_cost'];
+  let agentScore = 0;
+
+  questions.forEach((q, i) => {
+    const opt = q.options[answers[i]];
+    if (criteriaKeys.includes(q.criterion)) eligibilityScore += opt.score;
+    if (q.criterion.startsWith('wvw_') && opt.agent !== undefined) agentScore += opt.agent;
+  });
+
+  const category = eligibilityScore >= 18 ? 'HIGH' : eligibilityScore >= 13 ? 'MODERATE' : 'LOW';
+  const wvw = agentScore >= 8 ? 'Worker (Agent)' : agentScore >= 5 ? 'Both' : 'Wrenches (Tools)';
+
+  // Submit to API endpoint
+  
+  const leadData = { name, email, business, eligibilityScore, category, agentScore, wvw, answers: answers.map((a, i) => ({ question: i + 1, answer: a + 1, score: questions[i].options[a].score })) };
+  fetch('/api/quiz-lead', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(leadData) }).catch(err => console.error('Lead submit error:', err));
+
+  // Show confirmation
+  const captureEl = document.querySelector('.lead-capture');
+  captureEl.innerHTML = '<h3>✓ You\'re All Set!</h3><p>We\'ll send your detailed report to <strong>' + email + '</strong> shortly.</p>';
+}
+</script>
+
+</body>
+</html>
