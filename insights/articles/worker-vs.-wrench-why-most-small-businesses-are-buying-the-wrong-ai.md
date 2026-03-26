@@ -83,6 +83,8 @@ But you probably need a worker if:
 
 If three or more of those resonate, you're probably an agent candidate. Not because agents are trendy — because your business structure demands something that can think across boundaries, not just execute within them.
 
+_Not sure where you fall?_ [_Take the 2-minute quiz →_](https://www.shouldigetai.com/quiz)
+
 ## When You Need a Wrench
 
 And sometimes, a wrench is exactly right.
@@ -135,6 +137,8 @@ We don't sell AI tools. We don't sell agents. We sell clarity.
 We map your processes. We score them. We classify them. And we give you an honest, side-by-side comparison — Worker vs. Wrench — with real numbers attached. Then you decide.
 
 If you want to explore it, book a free 30-minute Discovery Conversation. No pitch. No pressure. Just an honest look at whether this makes sense for your business.
+
+_Take the free AI Eligibility Quiz to see where your business falls →_ [_shouldigetai.com/quiz_](https://www.shouldigetai.com/quiz)
 
 [**Start a Conversation →**](https://calendly.com/jeff-shouldigetai/discovery)
 
