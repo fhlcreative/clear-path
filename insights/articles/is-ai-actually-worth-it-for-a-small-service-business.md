@@ -66,6 +66,6 @@ Ready to Find Out?
 
 We offer a free 30-minute Discovery Conversation — no pitch, no obligation. We'll talk through your current workflows, identify your highest-leverage opportunities, and give you an honest read on whether an AI readiness assessment makes sense for where you are right now.
 
-**For your free Discovery Conversation →** [**BOOK NOW**](https://calendly.com/jeff-shouldigetai/delivery)
+**For your free Discovery Conversation →** [**BOOK NOW**](https://calendly.com/jeff-shouldigetai/discovery)
 
 _Process First. AI Second._
