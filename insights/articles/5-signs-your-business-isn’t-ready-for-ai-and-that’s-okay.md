@@ -2,8 +2,8 @@
 title: 5 Signs Your Business Isn’t Ready for AI (And That’s Okay)
 date: 2026-04-28
 category: Strategy
-featured_image: ''
-excerpt: 'Every small business owner is hearing the same message right now: You need AI. The pressure is constant. Vendors are pitching it. LinkedIn is full of it. Conferences are treating it like the dividing line between businesses that will thrive and businesses that will be left behind. But here’s the truth: not every business is ready for AI yet. And that’s okay.'
+featured_image: /images/articles/view-messy-office-workspace-with-laptop_23-2150282026.avif
+excerpt: Not every small business is ready for AI — and that’s okay. Here are five signs the real need may be process clarity, consistency, and operational discipline before automation.
 ---
 
 Every small business owner is hearing the same message right now: _You need AI._
@@ -237,4 +237,10 @@ It may be an honest conversation.
 
 Clear-Path AI Consulting helps small business owners evaluate AI the practical way: through process mapping, task scoring, and ROI clarity.
 
-**Process First. AI Second.**
+We offer a free 30-minute Discovery Conversation — no pitch, no obligation. We'll talk through your current workflows, identify your highest-leverage opportunities, and give you an honest read on whether an AI readiness assessment makes sense for where you are right now.
+
+[Take the 2-Minute Quiz  **→**](https://www.shouldigetai.com/quiz) to get an instant read on whether AI could work for your business.
+
+**For your free Discovery Conversation →** [**BOOK NOW**](https://calendly.com/jeff-shouldigetai/discovery)
+
+_Process First. AI Second._
