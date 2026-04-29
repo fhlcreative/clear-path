@@ -284,6 +284,12 @@
                 <img src="../logo.svg" alt="Clear-Path AI Consulting" class="h-8 w-auto mb-3">
                 <p class="text-sm text-brand-teal font-medium tracking-wide uppercase">Process First. AI Second.</p>
             </div>
+
+            <!-- Chamber membership widget -->
+            <div class="flex flex-col items-start md:items-center gap-2" aria-label="Chamber membership">
+                <p class="text-xs text-slate-400 uppercase tracking-wide font-medium">Proud Member</p>
+                <div id="mni-membership-shouldigetai" class="max-w-[180px]"></div>
+            </div>
             <div class="md:text-right">
                 <p class="text-xs text-slate-500">
                     &copy; <script>document.write(new Date().getFullYear())</script> Clear-Path AI Consulting &mdash; A service of Happy Camper Consulting, LLC
@@ -293,6 +299,10 @@
                 </p>
             </div>
         </div>
+        <script src="https://wilmingtonnc.chambermaster.com/Content/Script/Member.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            new MNI.Widgets.Member("mni-membership-shouldigetai",{member:21267,styleTemplate:"#@id{text-align:center;position:relative}#@id .mn-widget-member-name{font-weight:700}#@id .mn-widget-member-logo{max-width:100%}"}).create();
+        </script>
     </footer>
 
 </body>
