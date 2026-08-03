@@ -1,0 +1,5 @@
+# Files that must never be part of the deployed site.
+# Root-anchored so nothing nested (e.g. markdown used as a build input) is caught.
+
+# Per-site working notes — never serve these publicly.
+/SITE_STATUS.md
