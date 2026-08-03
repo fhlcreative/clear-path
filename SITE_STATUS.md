@@ -66,8 +66,18 @@ keys and passwords present in those sources were deliberately omitted.
 
 ### Gotchas
 - **Real domain is `shouldigetai.com`**, not `clear-path.vercel.app` (which the audit calls *"a different/unassigned alias"*).
-- `security-audit-2026-06-15.md` OPEN item: `api/callback.js` *"sends `repo`-scoped GitHub token via `postMessage(..., e.origin)` with NO origin allowlist + no `state`."* Patch designed, **NOT deployed** — held back because verifying needs a live CMS-login test and *"it could lock clients out of editing."* Do with Phil.
-- Same audit: clear-path is a **PUBLIC repo with no branch protection** — flagged for making private.
+- **⚠️ OPEN SECURITY ITEM — `api/callback.js` leaks the GitHub token to any origin.** Still **NOT patched** as of 2026-08-03. Read the code before touching it; analysis below.
+
+  Two defects, both in the popup HTML this handler returns:
+  1. `window.opener.postMessage("authorizing:github", "*")` — broadcasts to **any** origin that opened the popup.
+  2. `receiveMessage` replies with the token to `e.origin` — **whatever origin sent the message**, with no check.
+
+  Together: a page that opens this callback as a popup receives the broadcast, posts any message back, and is handed a **`repo`-scoped** token (`api/auth.js` requests `scope=repo`). That token grants read/write to every repo the authenticated user can reach — not just this one. `api/auth.js` also sends no `state` parameter, so the OAuth flow has no CSRF protection.
+
+  **Fix** (confined to the popup page — no CMS data touched): allowlist `https://www.shouldigetai.com` explicitly, use it as the `targetOrigin` in both `postMessage` calls, and `return` early when `e.origin` doesn't match. Add `state` to `auth.js` and verify it in `callback.js`.
+
+  **Why it's safe to deploy, despite the earlier "could lock clients out" note:** the change only affects the login popup. Worst case is "the login popup hangs" — no content is at risk and nothing is destructive. Phil can verify it himself at `/admin/` (he's a repo collaborator); Jeff never needs to be part of the test. Vercel instant-rollback restores the current behaviour in well under a minute. Test on production, not a preview — the GitHub OAuth App's callback URL is registered to the production domain, so preview deployments can't complete the flow anyway.
+- **PUBLIC repo with no branch protection.** Deliberate — Phil confirmed 2026-08-03 he made it public so Jeff could post through the CMS. **But public is probably not required:** `jeffrorabaugh` is already a **collaborator** (`gh api repos/fhlcreative/clear-path/collaborators`, checked 2026-08-03), and Sveltia CMS authenticates as the logged-in GitHub user, so a private repo works as long as that user has write access. Raised with Phil 2026-08-03; not changed, no decision yet. Note this compounds the item above — a public repo widens who can study the callback flow.
 - The quiz is click-based multi-step with no form submit — honeypot logic never applied here.
 - *"Follow client content specs strictly, don't rearrange or embellish section content."*
 - *"Use printf not echo when piping env vars to Vercel CLI."*
