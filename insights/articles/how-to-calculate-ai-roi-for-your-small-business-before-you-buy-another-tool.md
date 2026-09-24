@@ -6,368 +6,538 @@ featured_image: /images/articles/Processing-Map-ROI.png
 excerpt: Before you buy another AI tool, measure what it would actually change. Here's how to calculate AI ROI from a real process, not a vendor's promise.
 ---
 
-AI is everywhere right now.
+<h1>How to Calculate AI ROI for Your Small Business Before You Buy Another Tool</h1>
 
-You’ve probably seen the promises: save time, reduce costs, grow faster, automate the busywork.
+<p>AI is everywhere right now.</p>
 
-Some of those promises may be reasonable. Some may not apply to your business at all.
+<p>You’ve probably seen the promises: save time, reduce costs, grow faster, automate the busywork.</p>
 
-The practical question isn’t, “What can AI do?”
+<p>Some of those promises may be reasonable. Some may not apply to your business at all.</p>
 
-It’s this:
+<p>The practical question isn’t, “What can AI do?”</p>
 
-**What would AI change in one of your actual business processes, and would that change justify the cost, risk, and effort?**
+<p>It’s this:</p>
 
-That’s what AI return on investment, or AI ROI, is meant to help you understand.
+<p><strong>What would AI change in one of your actual business processes, and would that change justify the cost, risk, and effort?</strong></p>
 
-Not hype. Not tool collecting. A clear comparison between your current process, a possible future process, and the resources required to get there.
+<p>That’s what AI return on investment, or AI ROI, is meant to help you understand.</p>
 
-## Start With the Process, Not the Tool
+<p>Not hype. Not tool collecting. A clear comparison between your current process, a possible future process, and the resources required to get there.</p>
 
-Before calculating ROI, choose one specific workflow.
+<h2>Start With the Process, Not the Tool</h2>
 
-Not “AI for my business.” That’s too broad to measure.
+<p>Before calculating ROI, choose one specific workflow.</p>
 
-Instead, choose something like:
+<p>Not “AI for my business.”</p>
 
-- Responding to new inquiries
-- Preparing client proposals
-- Summarizing meeting notes
-- Creating recurring reports
-- Scheduling appointments
-- Updating records after customer interactions
-- Preparing invoices or payment reminders
+<p>That’s too broad to measure.</p>
 
-The more specific the process, the easier it becomes to see what happens today and what AI might reasonably change.
+<p>Instead, choose something like:</p>
 
-Research from [Microsoft’s business guidance on measuring AI ROI](https://www.microsoft.com/en-us/windows/business/knowledge-center/ai-roi-business-growth-use-cases) makes the same basic point: useful measurement begins with a defined workflow, a baseline, an expected outcome, and a way to track results.
+<ul>
 
-That’s the gap between “we’re using AI” and “AI is creating measurable value.”
+<li>Responding to new inquiries</li>
 
-![An existing Clear-Path workflow architecture showing connected discovery, analysis, strategy, implementation, and review stages](https://cdn.marblism.com/lBAru7__W0r.webp)
+<li>Preparing client proposals</li>
 
-#### 1. Establish Your Baseline Before You Change Anything
+<li>Summarizing meeting notes</li>
 
-A baseline is a documented picture of how the process works now.
+<li>Creating recurring reports</li>
 
-Without one, you’re comparing AI against a feeling.
+<li>Scheduling appointments</li>
 
-Write down:
+<li>Updating records after customer interactions</li>
 
-- **Volume:** How many items move through the process each week or month?
-- **Time**: How long does each item take from start to finish?
-- **Labor cost**: What is the fully loaded hourly cost of the person doing the work?
-- **Rework**: How often does someone need to correct, repeat, or chase information?
-- **Quality**: What errors, delays, or missed steps occur?
-- **Business impact:** Does the process affect response time, client experience, revenue, or capacity?
+<li>Preparing invoices or payment reminders</li>
 
-A practical starting point is to observe the process over a normal operating period, often two to four weeks. The goal isn’t perfect research. The goal is enough real information to avoid guessing.
+</ul>
 
-Example baseline
+<p>The more specific the process, the easier it becomes to see what happens today and what AI might reasonably change.</p>
 
-**This is a worked example only. It is not a Clear-Path result.**
+<p>Research from <a href="https://www.microsoft.com/en-us/windows/business/knowledge-center/ai-roi-business-growth-use-cases">Microsoft’s business guidance on measuring AI ROI</a> makes the same basic point: useful measurement begins with a defined workflow, a baseline, an expected outcome, and a way to track results.</p>
 
-Assume a small service business receives:
+<p>That’s the gap between “we’re using AI” and “AI is creating measurable value.”</p>
 
-- 80 recurring requests per month
-- 15 minutes of staff time per request
-- An example fully loaded labor cost of $40 per hour
+<p><img src="https://cdn.marblism.com/lBAru7__W0r.webp" alt="An existing Clear-Path workflow architecture showing connected discovery, analysis, strategy, implementation, and review stages"></p>
 
-The baseline labor time is:
+<h2>1. Establish Your Baseline Before You Change Anything</h2>
 
-- 80 requests × 15 minutes = 1,200 minutes
-- 1,200 minutes ÷ 60 = 20 hours per month
-- 20 hours × $40 = **$800 of monthly labor value**
+<p>A baseline is a documented picture of how the process works now.</p>
 
-That gives you a starting point.
+<p>Without one, you’re comparing AI against a feeling.</p>
 
-The process may also create value or cost that isn’t captured by labor time. For example, a delayed response may affect client satisfaction. A missed follow-up may affect future revenue. If you include those factors, document the assumptions separately rather than quietly adding optimistic estimates.
+<p>Write down:</p>
 
-<br>
+<ul>
 
-#### 2. Map the Work Before You Automate It
+<li><strong>Volume:</strong> How many items move through the process each week or month?</li>
 
-A process map shows what actually happens, not what the owner or manager thinks happens.
+<li><strong>Time:</strong> How long does each item take from start to finish?</li>
 
-List the steps in order:
+<li><strong>Labor cost:</strong> What is the fully loaded hourly cost of the person doing the work?</li>
 
-1. What triggers the process?
-2. Where does the information arrive?
-3. Who reviews it?
-4. What decisions are made?
-5. Which systems are used?
-6. Where are handoffs made?
-7. What happens when something is unusual?
-8. How is the process completed and recorded?
+<li><strong>Rework:</strong> How often does someone need to correct, repeat, or chase information?</li>
 
-This often reveals that the visible task is only one part of the work.
+<li><strong>Quality:</strong> What errors, delays, or missed steps occur?</li>
 
-For example, “send a client follow-up” may also include:
+<li><strong>Business impact:</strong> Does the process affect response time, client experience, revenue, or capacity?</li>
 
-- Finding the latest meeting notes
-- Checking the client’s status
-- Confirming what was promised
-- Drafting the message
-- Reviewing the tone
-- Updating the CRM
-- Creating a reminder
-- Escalating an unresolved issue
+</ul>
 
-AI may help with some of those steps. It may be unsuitable for others.
+<p>A practical starting point is to observe the process over a normal operating period, often two to four weeks. The goal isn’t perfect research. The goal is enough real information to avoid guessing.</p>
 
-That’s why automation built before process mapping can create a faster version of a confusing process.
+<h3>Example baseline</h3>
 
-**Faster confusion is still confusion.**
+<p><strong>This is a worked example only. It is not a Clear-Path result.</strong></p>
 
-Clear-Path uses a process-first approach based on value stream process mapping. We map the workflow, document the steps as SOPs, and then evaluate where AI fits. The process map remains useful even if your final recommendation is “not yet” or “no.”
+<p>Assume a small service business receives:</p>
 
-<br>
+<ul>
 
-#### 3. Score the Task, Not the Slogan
+<li>80 recurring requests per month</li>
 
-A process may contain several tasks, and each task may have a different level of AI eligibility.
+<li>15 minutes of staff time per request</li>
 
-A task is generally a stronger candidate when it is:
+<li>An example fully loaded labor cost of $40 per hour</li>
 
-- Repetitive
-- Digital or text-based
-- Guided by clear rules
-- High enough in volume to matter
-- Easy for a person to review
-- Low enough in risk to test safely
-- Measurable before and after implementation
+</ul>
 
-A task is generally a weaker candidate when it:
+<p>The baseline labor time is:</p>
 
-- Requires nuanced professional judgment
-- Depends on complex negotiation
-- Has very low volume
-- Involves sensitive decisions that are difficult to review
-- Has no reliable baseline
-- Changes significantly from one case to the next
+<ul>
 
-This doesn’t mean a low-scoring task can never use AI. It means the business case requires more care.
+<li>80 requests × 15 minutes = 1,200 minutes</li>
 
-A useful task-level assessment asks:
+<li>1,200 minutes ÷ 60 = 20 hours per month</li>
 
-**Can AI perform part of this work consistently, and can a human catch mistakes before they create unacceptable consequences?**
+<li>20 hours × $40 = <strong>$800 of monthly labor value</strong></li>
 
-That is more useful than asking whether a tool has the feature you saw in a demonstration.
+</ul>
 
-<br>
+<p>That gives you a starting point.</p>
 
-#### 4. Separate the Worker From the Wrench
+<p>The process may also create value or cost that isn’t captured by labor time. For example, a delayed response may affect client satisfaction. A missed follow-up may affect future revenue. If you include those factors, document the assumptions separately rather than quietly adding optimistic estimates.</p>
 
-Not every AI use case needs the same kind of solution.
+<h2>2. Map the Work Before You Automate It</h2>
 
-Think of an individual AI tool as a **wrench**. It performs a defined function:
+<p>A process map shows what actually happens, not what the owner or manager thinks happens.</p>
 
-- Transcribe a meeting
-- Draft a message
-- Summarize a document
-- Schedule an appointment
-- Extract information from a form
+<p>List the steps in order:</p>
 
-A dedicated AI agent is more like a **worker**. It may coordinate several steps, retain business context, move information between processes, and handle exceptions within defined boundaries.
+<ol>
 
-Neither is automatically better.
+<li>What triggers the process?</li>
 
-The question is which one matches the work.
+<li>Where does the information arrive?</li>
 
-A toolbox of individual AI tools may fit when:
+<li>Who reviews it?</li>
 
-- Your tasks are separate and well-defined
-- You only need one or two focused capabilities
-- Your team can manage the handoffs
-- The process does not require much shared context
-- You want to test a narrow use case first
+<li>What decisions are made?</li>
 
-<br>
+<li>Which systems are used?</li>
 
-A dedicated AI agent may fit when:
+<li>Where are handoffs made?</li>
 
-- Several steps depend on the same business context
-- The work crosses multiple systems
-- The process requires ongoing coordination
-- There are frequent but manageable exceptions
-- The cost of manual handoffs is significant
+<li>What happens when something is unusual?</li>
 
-The comparison should include more than subscription fees.
+<li>How is the process completed and recorded?</li>
 
-Look at:
+</ol>
 
-- Setup effort
-- Ongoing maintenance
-- Human review
-- Training and adoption
-- Data access
-- Security requirements
-- Number of systems involved
-- Context awareness
-- Scalability
-- Failure recovery
-- Ability to change the workflow later
+<p>This often reveals that the visible task is only one part of the work.</p>
 
-Sometimes a wrench is exactly what you need. Sometimes you need a worker. Sometimes the process needs better documentation before either option makes sense.
+<p>For example, “send a client follow-up” may also include:</p>
 
-<br>
+<ul>
 
-#### 5. Calculate the Value Conservatively
+<li>Finding the latest meeting notes</li>
 
-Once you have a baseline, estimate what may change.
+<li>Checking the client’s status</li>
 
-Possible value categories include:
+<li>Confirming what was promised</li>
 
-- Labor time reduced
-- Rework reduced
-- Faster response time
-- More capacity without immediate hiring
-- Fewer missed handoffs
-- Improved consistency
-- Additional revenue, if you can reasonably attribute it
+<li>Drafting the message</li>
 
-Be careful with time savings.
+<li>Reviewing the tone</li>
 
-If AI saves five hours per week, that doesn’t automatically mean the business receives five hours of cash savings. The value may instead be additional capacity that you use for client work, business development, training, or recovery from overload.
+<li>Updating the CRM</li>
 
-State what the time is worth and what you plan to do with it.
+<li>Creating a reminder</li>
 
-Worked ROI example
+<li>Escalating an unresolved issue</li>
 
-**The following figures are illustrative assumptions only. They are not reported results.**
+</ul>
 
-Suppose the business from the earlier example tests an AI-assisted version of the process and estimates:
+<p>AI may help with some of those steps. It may be unsuitable for others.</p>
 
-- Baseline time: 20 hours per month
-- Post-AI time: 10.67 hours per month
-- Example loaded labor rate: $40 per hour
-- Monthly time reduction: 9.33 hours
-- Monthly AI operating cost: $100
-- One-time setup and process preparation: $600
+<p>That’s why automation built before process mapping can create a faster version of a confusing process.</p>
 
-The monthly labor value created would be:
+<p><strong>Faster confusion is still confusion.</strong></p>
 
-- 9.33 hours × $40 = **$373.20 per month**
+<p>Clear-Path uses a process-first approach based on value stream process mapping. We map the workflow, document the steps as SOPs, and then evaluate where AI fits. The process map remains useful even if your final recommendation is “not yet” or “no.”</p>
 
-The monthly net benefit would be:
+<h2>3. Score the Task, Not the Slogan</h2>
 
-- $373.20 − $100 = **$273.20 per month**
+<p>A process may contain several tasks, and each task may have a different level of AI eligibility.</p>
 
-The first-year cost would be:
+<p>A task is generally a stronger candidate when it is:</p>
 
-- $600 one-time setup
-- $100 × 12 months = $1,200 operating cost
-- Total year-one cost = **$1,800**
+<ul>
 
-The annual labor value would be:
+<li>Repetitive</li>
 
-- $373.20 × 12 = **$4,478.40**
+<li>Digital or text-based</li>
 
-The illustrative year-one ROI would be:
+<li>Guided by clear rules</li>
 
-- ($4,478.40 − $1,800) ÷ $1,800 × 100
-- **Approximately 148.8%**
+<li>High enough in volume to matter</li>
 
-The illustrative payback period would be:
+<li>Easy for a person to review</li>
 
-- $600 ÷ $273.20
-- **Approximately 2.2 months**
+<li>Low enough in risk to test safely</li>
 
-Again, this only works if the assumptions hold and the time saved creates real business value.
+<li>Measurable before and after implementation</li>
 
-If the time simply disappears into a less demanding workday without improving capacity, quality, or financial performance, the calculation should be presented as capacity value, not realized cash savings.
+</ul>
 
-<br>
+<p>A task is generally a weaker candidate when it:</p>
 
-#### 6. Include the Full Cost of Ownership
+<ul>
 
-#### 
+<li>Requires nuanced professional judgment</li>
 
-The monthly subscription is only one part of the cost.
+<li>Depends on complex negotiation</li>
 
-Your calculation should consider:
+<li>Has very low volume</li>
 
-- Tool or platform fees
-- Setup and configuration
-- Process cleanup
-- Data preparation
-- Internal staff time
-- Training
-- Human review
-- Quality checks
-- Integration work
-- Ongoing maintenance
-- Privacy and security review
-- Replacement or rollback costs
+<li>Involves sensitive decisions that are difficult to review</li>
 
-This broader view is called **total cost of ownership**.
+<li>Has no reliable baseline</li>
 
-[Shopify’s overview of AI ROI](https://www.shopify.com/enterprise/blog/ai-roi) also emphasizes that implementation, training, quality assurance, governance, and maintenance can materially affect the return.
+<li>Changes significantly from one case to the next</li>
 
-For a small business, this matters even more because internal capacity is limited. A project that looks inexpensive on paper may still be a poor fit if it consumes weeks of owner time or creates another system the team has to maintain.
+</ul>
 
-<br>
+<p>This doesn’t mean a low-scoring task can never use AI. It means the business case requires more care.</p>
 
-#### 7. Decide Whether the Answer Is “Go,” “Not Yet,” or “No”
+<p>A useful task-level assessment asks:</p>
 
-A responsible AI assessment should allow for more than a purchase decision.
+<p><strong>Can AI perform part of this work consistently, and can a human catch mistakes before they create unacceptable consequences?</strong></p>
 
-Your conclusion may be:
+<p>That is more useful than asking whether a tool has the feature you saw in a demonstration.</p>
 
-##### **Go**
+<h2>4. Separate the Worker From the Wrench</h2>
 
-The process is measurable, the task is suitable, the expected value is reasonable, and the business can support implementation.
+<p>Not every AI use case needs the same kind of solution.</p>
 
-##### **Go With Caveats**
+<p>Think of an individual AI tool as a <strong>wrench</strong>. It performs a defined function:</p>
 
-The opportunity appears useful, but it requires human review, better data, tighter controls, or a limited pilot.
+<ul>
 
-##### **Not Yet**
+<li>Transcribe a meeting</li>
 
-The process may eventually benefit from AI, but documentation, data quality, ownership, or volume is not ready.
+<li>Draft a message</li>
 
-##### **No**
+<li>Summarize a document</li>
 
-The task is too low-volume, too risky, too judgment-heavy, or too expensive to justify AI at this time.
+<li>Schedule an appointment</li>
 
-<br>
+<li>Extract information from a form</li>
 
-![A process map resolving into four decision paths: go, go with caveats, not yet, and no](https://cdn.marblism.com/bfUXwNUyjdj.webp)
+</ul>
 
-<br>
+<p>A dedicated AI agent is more like a <strong>worker</strong>. It may coordinate several steps, retain business context, move information between processes, and handle exceptions within defined boundaries.</p>
 
-“No” is not a failed assessment.
+<p>Neither is automatically better.</p>
 
-It may be the most useful answer available.
+<p>The question is which one matches the work.</p>
 
-A clear “not yet” can prevent you from buying a tool before your process is ready. A clear “no” can protect your budget and your team’s attention.
+<p><img src="https://cdn.marblism.com/AmTggndlsmP.webp" alt="A visual comparison of a focused AI tool represented by a wrench and a connected multi-step AI worker workflow"></p>
 
-<br>
+<h3>A toolbox of individual AI tools may fit when:</h3>
 
-##### The Best ROI Calculation Gives You Better Judgment
+<ul>
 
-##### 
+<li>Your tasks are separate and well-defined</li>
 
-AI ROI is not about producing a dazzling percentage. It is about understanding:
+<li>You only need one or two focused capabilities</li>
 
-- What work exists today
-- What that work costs
-- Which tasks are eligible
-- What solution fits the workflow
-- What assumptions support the calculation
-- What risks remain
-- What you can measure after implementation
+<li>Your team can manage the handoffs</li>
 
-**That’s why we start with your processes, not a shopping list of tools.**
+<li>The process does not require much shared context</li>
 
-We map how your business works. We build documented SOPs. We score tasks for AI eligibility. We compare a dedicated AI agent with individual AI tools. Then we show you the financial case and the assumptions behind it.
+<li>You want to test a narrow use case first</li>
 
-Sometimes the recommendation is to move forward.
+</ul>
 
-Sometimes it’s to improve the process first.
+<h3>A dedicated AI agent may fit when:</h3>
 
-Sometimes it’s to leave the process alone.
+<ul>
 
-That’s still clarity.
+<li>Several steps depend on the same business context</li>
 
-If you’d like an honest, no-pressure conversation about where AI may, or may not, fit in your business, [you can schedule a conversation with Clear-Path AI Consulting](https://calendly.com/jeff-shouldigetai).
+<li>The work crosses multiple systems</li>
+
+<li>The process requires ongoing coordination</li>
+
+<li>There are frequent but manageable exceptions</li>
+
+<li>The cost of manual handoffs is significant</li>
+
+</ul>
+
+<p>The comparison should include more than subscription fees.</p>
+
+<p>Look at:</p>
+
+<ul>
+
+<li>Setup effort</li>
+
+<li>Ongoing maintenance</li>
+
+<li>Human review</li>
+
+<li>Training and adoption</li>
+
+<li>Data access</li>
+
+<li>Security requirements</li>
+
+<li>Number of systems involved</li>
+
+<li>Context awareness</li>
+
+<li>Scalability</li>
+
+<li>Failure recovery</li>
+
+<li>Ability to change the workflow later</li>
+
+</ul>
+
+<p>Sometimes a wrench is exactly what you need.</p>
+
+<p>Sometimes you need a worker.</p>
+
+<p>Sometimes the process needs better documentation before either option makes sense.</p>
+
+<h2>5. Calculate the Value Conservatively</h2>
+
+<p>Once you have a baseline, estimate what may change.</p>
+
+<p>Possible value categories include:</p>
+
+<ul>
+
+<li>Labor time reduced</li>
+
+<li>Rework reduced</li>
+
+<li>Faster response time</li>
+
+<li>More capacity without immediate hiring</li>
+
+<li>Fewer missed handoffs</li>
+
+<li>Improved consistency</li>
+
+<li>Additional revenue, if you can reasonably attribute it</li>
+
+</ul>
+
+<p>Be careful with time savings.</p>
+
+<p>If AI saves five hours per week, that doesn’t automatically mean the business receives five hours of cash savings. The value may instead be additional capacity that you use for client work, business development, training, or recovery from overload.</p>
+
+<p>State what the time is worth and what you plan to do with it.</p>
+
+<h3>Worked ROI example</h3>
+
+<p><strong>The following figures are illustrative assumptions only. They are not reported results.</strong></p>
+
+<p>Suppose the business from the earlier example tests an AI-assisted version of the process and estimates:</p>
+
+<ul>
+
+<li>Baseline time: 20 hours per month</li>
+
+<li>Post-AI time: 10.67 hours per month</li>
+
+<li>Example loaded labor rate: $40 per hour</li>
+
+<li>Monthly time reduction: 9.33 hours</li>
+
+<li>Monthly AI operating cost: $100</li>
+
+<li>One-time setup and process preparation: $600</li>
+
+</ul>
+
+<p>The monthly labor value created would be:</p>
+
+<ul>
+
+<li>9.33 hours × $40 = <strong>$373.20 per month</strong></li>
+
+</ul>
+
+<p>The monthly net benefit would be:</p>
+
+<ul>
+
+<li>$373.20 − $100 = <strong>$273.20 per month</strong></li>
+
+</ul>
+
+<p>The first-year cost would be:</p>
+
+<ul>
+
+<li>$600 one-time setup</li>
+
+<li>$100 × 12 months = $1,200 operating cost</li>
+
+<li>Total year-one cost = <strong>$1,800</strong></li>
+
+</ul>
+
+<p>The annual labor value would be:</p>
+
+<ul>
+
+<li>$373.20 × 12 = <strong>$4,478.40</strong></li>
+
+</ul>
+
+<p>The illustrative year-one ROI would be:</p>
+
+<ul>
+
+<li>($4,478.40 − $1,800) ÷ $1,800 × 100</li>
+
+<li><strong>Approximately 148.8%</strong></li>
+
+</ul>
+
+<p>The illustrative payback period would be:</p>
+
+<ul>
+
+<li>$600 ÷ $273.20</li>
+
+<li><strong>Approximately 2.2 months</strong></li>
+
+</ul>
+
+<p>Again, this only works if the assumptions hold and the time saved creates real business value.</p>
+
+<p>If the time simply disappears into a less demanding workday without improving capacity, quality, or financial performance, the calculation should be presented as capacity value, not realized cash savings.</p>
+
+<h2>6. Include the Full Cost of Ownership</h2>
+
+<p>The monthly subscription is only one part of the cost.</p>
+
+<p>Your calculation should consider:</p>
+
+<ul>
+
+<li>Tool or platform fees</li>
+
+<li>Setup and configuration</li>
+
+<li>Process cleanup</li>
+
+<li>Data preparation</li>
+
+<li>Internal staff time</li>
+
+<li>Training</li>
+
+<li>Human review</li>
+
+<li>Quality checks</li>
+
+<li>Integration work</li>
+
+<li>Ongoing maintenance</li>
+
+<li>Privacy and security review</li>
+
+<li>Replacement or rollback costs</li>
+
+</ul>
+
+<p>This broader view is called <strong>total cost of ownership</strong>.</p>
+
+<p><a href="https://www.shopify.com/enterprise/blog/ai-roi">Shopify’s overview of AI ROI</a> also emphasizes that implementation, training, quality assurance, governance, and maintenance can materially affect the return.</p>
+
+<p>For a small business, this matters even more because internal capacity is limited. A project that looks inexpensive on paper may still be a poor fit if it consumes weeks of owner time or creates another system the team has to maintain.</p>
+
+<h2>7. Decide Whether the Answer Is “Go,” “Not Yet,” or “No”</h2>
+
+<p>A responsible AI assessment should allow for more than a purchase decision.</p>
+
+<p>Your conclusion may be:</p>
+
+<h3>Go</h3>
+
+<p>The process is measurable, the task is suitable, the expected value is reasonable, and the business can support implementation.</p>
+
+<h3>Go With Caveats</h3>
+
+<p>The opportunity appears useful, but it requires human review, better data, tighter controls, or a limited pilot.</p>
+
+<h3>Not Yet</h3>
+
+<p>The process may eventually benefit from AI, but documentation, data quality, ownership, or volume is not ready.</p>
+
+<h3>No</h3>
+
+<p>The task is too low-volume, too risky, too judgment-heavy, or too expensive to justify AI at this time.</p>
+
+<p><img src="https://cdn.marblism.com/bfUXwNUyjdj.webp" alt="A process map resolving into four decision paths: go, go with caveats, not yet, and no"></p>
+
+<p>“No” is not a failed assessment.</p>
+
+<p>It may be the most useful answer available.</p>
+
+<p>A clear “not yet” can prevent you from buying a tool before your process is ready. A clear “no” can protect your budget and your team’s attention.</p>
+
+<h2>The Best ROI Calculation Gives You Better Judgment</h2>
+
+<p>AI ROI is not about producing a dazzling percentage.</p>
+
+<p>It is about understanding:</p>
+
+<ul>
+
+<li>What work exists today</li>
+
+<li>What that work costs</li>
+
+<li>Which tasks are eligible</li>
+
+<li>What solution fits the workflow</li>
+
+<li>What assumptions support the calculation</li>
+
+<li>What risks remain</li>
+
+<li>What you can measure after implementation</li>
+
+</ul>
+
+<p>That’s why we start with your processes, not a shopping list of tools.</p>
+
+<p>We map how your business works. We build documented SOPs. We score tasks for AI eligibility. We compare a dedicated AI agent with individual AI tools. Then we show you the financial case and the assumptions behind it.</p>
+
+<p>Sometimes the recommendation is to move forward.</p>
+
+<p>Sometimes it’s to improve the process first.</p>
+
+<p>Sometimes it’s to leave the process alone.</p>
+
+<p>That’s still clarity.</p>
+
+<p>If you’d like an honest, no-pressure conversation about where AI may, or may not, fit in your business, <a href="https://calendly.com/jeff-shouldigetai">you can schedule a conversation with Clear-Path AI Consulting</a>.</p>
