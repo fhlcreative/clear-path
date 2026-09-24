@@ -318,15 +318,15 @@ Your conclusion may be:
 
 The process is measurable, the task is suitable, the expected value is reasonable, and the business can support implementation.
 
-##### Go With Caveats
+##### **Go With Caveats**
 
 The opportunity appears useful, but it requires human review, better data, tighter controls, or a limited pilot.
 
-##### Not Yet
+##### **Not Yet**
 
 The process may eventually benefit from AI, but documentation, data quality, ownership, or volume is not ready.
 
-##### No
+##### **No**
 
 The task is too low-volume, too risky, too judgment-heavy, or too expensive to justify AI at this time.
 
