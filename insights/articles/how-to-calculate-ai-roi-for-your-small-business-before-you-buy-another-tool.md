@@ -1,6 +1,6 @@
 ---
 title: How to Calculate AI ROI for Your Small Business Before You Buy Another Tool
-date: 2026-09-25
+date: 2026-09-24
 category: Strategy
 featured_image: /images/articles/Processing-Map-ROI.png
 excerpt: Before you buy another AI tool, measure what it would actually change. Here's how to calculate AI ROI from a real process, not a vendor's promise.
@@ -31,17 +31,11 @@ Not “AI for my business.” That’s too broad to measure.
 Instead, choose something like:
 
 - Responding to new inquiries
-
 - Preparing client proposals
-
 - Summarizing meeting notes
-
 - Creating recurring reports
-
 - Scheduling appointments
-
 - Updating records after customer interactions
-
 - Preparing invoices or payment reminders
 
 The more specific the process, the easier it becomes to see what happens today and what AI might reasonably change.
@@ -76,17 +70,13 @@ Example baseline
 Assume a small service business receives:
 
 - 80 recurring requests per month
-
 - 15 minutes of staff time per request
-
 - An example fully loaded labor cost of $40 per hour
 
 The baseline labor time is:
 
 - 80 requests × 15 minutes = 1,200 minutes
-
 - 1,200 minutes ÷ 60 = 20 hours per month
-
 - 20 hours × $40 = **$800 of monthly labor value**
 
 That gives you a starting point.
@@ -102,19 +92,12 @@ A process map shows what actually happens, not what the owner or manager thinks 
 List the steps in order:
 
 1. What triggers the process?
-
 2. Where does the information arrive?
-
 3. Who reviews it?
-
 4. What decisions are made?
-
 5. Which systems are used?
-
 6. Where are handoffs made?
-
 7. What happens when something is unusual?
-
 8. How is the process completed and recorded?
 
 This often reveals that the visible task is only one part of the work.
@@ -122,19 +105,12 @@ This often reveals that the visible task is only one part of the work.
 For example, “send a client follow-up” may also include:
 
 - Finding the latest meeting notes
-
 - Checking the client’s status
-
 - Confirming what was promised
-
 - Drafting the message
-
 - Reviewing the tone
-
 - Updating the CRM
-
 - Creating a reminder
-
 - Escalating an unresolved issue
 
 AI may help with some of those steps. It may be unsuitable for others.
@@ -154,31 +130,20 @@ A process may contain several tasks, and each task may have a different level of
 A task is generally a stronger candidate when it is:
 
 - Repetitive
-
 - Digital or text-based
-
 - Guided by clear rules
-
 - High enough in volume to matter
-
 - Easy for a person to review
-
 - Low enough in risk to test safely
-
 - Measurable before and after implementation
 
 A task is generally a weaker candidate when it:
 
 - Requires nuanced professional judgment
-
 - Depends on complex negotiation
-
 - Has very low volume
-
 - Involves sensitive decisions that are difficult to review
-
 - Has no reliable baseline
-
 - Changes significantly from one case to the next
 
 This doesn’t mean a low-scoring task can never use AI. It means the business case requires more care.
@@ -198,13 +163,9 @@ Not every AI use case needs the same kind of solution.
 Think of an individual AI tool as a **wrench**. It performs a defined function:
 
 - Transcribe a meeting
-
 - Draft a message
-
 - Summarize a document
-
 - Schedule an appointment
-
 - Extract information from a form
 
 A dedicated AI agent is more like a **worker**. It may coordinate several steps, retain business context, move information between processes, and handle exceptions within defined boundaries.
@@ -216,13 +177,9 @@ The question is which one matches the work.
 A toolbox of individual AI tools may fit when:
 
 - Your tasks are separate and well-defined
-
 - You only need one or two focused capabilities
-
 - Your team can manage the handoffs
-
 - The process does not require much shared context
-
 - You want to test a narrow use case first
 
 <br>
@@ -230,13 +187,9 @@ A toolbox of individual AI tools may fit when:
 A dedicated AI agent may fit when:
 
 - Several steps depend on the same business context
-
 - The work crosses multiple systems
-
 - The process requires ongoing coordination
-
 - There are frequent but manageable exceptions
-
 - The cost of manual handoffs is significant
 
 The comparison should include more than subscription fees.
@@ -244,25 +197,15 @@ The comparison should include more than subscription fees.
 Look at:
 
 - Setup effort
-
 - Ongoing maintenance
-
 - Human review
-
 - Training and adoption
-
 - Data access
-
 - Security requirements
-
 - Number of systems involved
-
 - Context awareness
-
 - Scalability
-
 - Failure recovery
-
 - Ability to change the workflow later
 
 Sometimes a wrench is exactly what you need. Sometimes you need a worker. Sometimes the process needs better documentation before either option makes sense.
@@ -276,17 +219,11 @@ Once you have a baseline, estimate what may change.
 Possible value categories include:
 
 - Labor time reduced
-
 - Rework reduced
-
 - Faster response time
-
 - More capacity without immediate hiring
-
 - Fewer missed handoffs
-
 - Improved consistency
-
 - Additional revenue, if you can reasonably attribute it
 
 Be careful with time savings.
@@ -302,15 +239,10 @@ Worked ROI example
 Suppose the business from the earlier example tests an AI-assisted version of the process and estimates:
 
 - Baseline time: 20 hours per month
-
 - Post-AI time: 10.67 hours per month
-
 - Example loaded labor rate: $40 per hour
-
 - Monthly time reduction: 9.33 hours
-
 - Monthly AI operating cost: $100
-
 - One-time setup and process preparation: $600
 
 The monthly labor value created would be:
@@ -324,9 +256,7 @@ The monthly net benefit would be:
 The first-year cost would be:
 
 - $600 one-time setup
-
 - $100 × 12 months = $1,200 operating cost
-
 - Total year-one cost = **$1,800**
 
 The annual labor value would be:
@@ -336,13 +266,11 @@ The annual labor value would be:
 The illustrative year-one ROI would be:
 
 - ($4,478.40 − $1,800) ÷ $1,800 × 100
-
 - **Approximately 148.8%**
 
 The illustrative payback period would be:
 
 - $600 ÷ $273.20
-
 - **Approximately 2.2 months**
 
 Again, this only works if the assumptions hold and the time saved creates real business value.
@@ -360,27 +288,16 @@ The monthly subscription is only one part of the cost.
 Your calculation should consider:
 
 - Tool or platform fees
-
 - Setup and configuration
-
 - Process cleanup
-
 - Data preparation
-
 - Internal staff time
-
 - Training
-
 - Human review
-
 - Quality checks
-
 - Integration work
-
 - Ongoing maintenance
-
 - Privacy and security review
-
 - Replacement or rollback costs
 
 This broader view is called **total cost of ownership**.
@@ -434,17 +351,11 @@ A clear “not yet” can prevent you from buying a tool before your process is 
 AI ROI is not about producing a dazzling percentage. It is about understanding:
 
 - What work exists today
-
 - What that work costs
-
 - Which tasks are eligible
-
 - What solution fits the workflow
-
 - What assumptions support the calculation
-
 - What risks remain
-
 - What you can measure after implementation
 
 **That’s why we start with your processes, not a shopping list of tools.**
